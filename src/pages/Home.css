@@ -1,3 +1,8 @@
+#home_body{
+  widht:100%;
+  background: linear-gradient(to bottom, rgb(5, 20, 71),rgb(232, 232, 245));
+}
+
 .home-container{
     width: 500px;
     margin-top : 10%; 

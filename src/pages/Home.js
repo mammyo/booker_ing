@@ -12,6 +12,7 @@ const Home = () => {
         fontSize: '2rem'
     };
     return (
+        <div id='home_body'>
         <div className='home-container'>
                 {/* <div className='inner-container'>
                     <div className='inner-title'><li>일일 예약자 수 </li></div>
@@ -32,6 +33,7 @@ const Home = () => {
                     <div className='inner-title'><li>일일 예약자 수 </li></div>
                     <div className='inner-box'>하이요</div>
                 </div> */}
+        </div>
         </div>
     );
 };
