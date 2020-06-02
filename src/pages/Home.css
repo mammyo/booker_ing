@@ -1,0 +1,51 @@
+
+
+
+.home-container{
+    width: 800px;
+    margin-top : 5%; 
+    margin-bottom : 5%;
+    padding : 5%;
+    height: 1000px;
+    overflow: auto;
+    border-radius: 50px;
+    background-color: white;
+    display: inline-block;
+    opacity: 0.3;
+}
+
+@import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+
+.inner-title{
+    background-color: white;
+    font-size: 18px;
+    font: outline;
+    border-bottom:2px solid black;
+    border-radius: 10px;
+  }
+  .inner-box{
+    padding-top: 5%;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
+    display: inline-block;
+    font-size: 30px;
+    font-family: 'Nanum Pen Script',cursive;
+    font-weight: bold;
+  }
+  .inner-container{
+    
+     float: left; 
+     width: 200px;
+     height: 100px; 
+     margin: 4%;
+     padding-right: 30px; 
+     border-radius: 50px;
+     border-right: 1px solid#d6d6d6; 
+     border-bottom: 1px solid#d6d6d6;
+     
+     
+     
+     
+    }
+

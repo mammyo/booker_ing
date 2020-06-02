@@ -1,0 +1,45 @@
+.header{ 
+    width: 100%;
+   
+}
+
+.main_header{ 
+    background: rgb(255, 255, 255);
+     float: left; width: 100%;
+     height:auto; 
+     
+     border-right: 1px solid#d6d6d6; 
+     border-bottom: 1px solid black;
+    }
+
+
+
+.logobox{
+    background: rgb(255, 255, 255);
+
+    float: left;
+    margin-top:10px;
+    padding-right: 20px;
+
+    height: 80px; 
+    width: auto;
+
+    border-right: 1px solid#d6d6d6;
+    
+
+}
+
+.logobox2{
+    width: auto;
+}
+
+.catalog{
+    background: rgb(255, 255, 255);
+    float: left;
+    font-size: 20px;
+    margin: 40px 10px 10px 10px; 
+    width: auto; height:60px;
+    
+
+
+}
