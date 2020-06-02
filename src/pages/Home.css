@@ -1,17 +1,17 @@
-
-
-
 .home-container{
-    width: 800px;
-    margin-top : 5%; 
-    margin-bottom : 5%;
+    width: 500px;
+    margin-top : 10%; 
+    margin-bottom : 10%;
+    margin-left: 10%;
     padding : 5%;
-    height: 1000px;
+    height: 500px;
     overflow: auto;
     border-radius: 50px;
     background-color: white;
+    border-right: 1px solid black;
     display: inline-block;
     opacity: 0.3;
+
 }
 
 @import url(//fonts.googleapis.com/earlyaccess/nanumpenscript.css);
