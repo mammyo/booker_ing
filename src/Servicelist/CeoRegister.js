@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import './main.css'
 import CalendarSwitch from './calendarToggle';
 import Time from './time'
@@ -8,43 +8,55 @@ import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
 class CeoRegister extends Component {
-    
-    render(){
+
+
+    minclick = () => {
+        alert("완료되었습니다.")
+
+
+    }
+
+
+    render() {
         return (
-            <div id="contents">
-                <div>        
-                <MenuName/>
-                </div>
-                
-                <div>           
-                <MenuPrice/>
-                </div>
+            <div className='service_body2_inner'>
+                <div id="contents">
+                    <div>
+                        <MenuName />
+                    </div>
 
-                <div>                          
-                <ImageSwitch/>
+                    <div>
+                        <MenuPrice />
+                    </div>
+
+                    <div>
+                        <ImageSwitch />
+                    </div>
+
+                    <div>
+                        <CommentSwitch />
+                    </div>
+
+                    <div>
+                        <CalendarSwitch />
+                    </div>
+
+                    <div>
+                        <Time />
+                    </div>
+
+                    <div>
+                        <Time2 />
+                    </div>
+
+                    <button id='finish' onClick={this.minclick}>완료</button>
+
                 </div>
-
-                <div>                              
-                <CommentSwitch/>
-                </div>
-
-                <div>                                  
-                <CalendarSwitch/>
-                </div>  
-
-                <div>  
-                <Time/>
-                </div>
-
-                <div>                 
-                <Time2/>
-                </div>
-
             </div>
         );
     }
 }
-    
+
 
 
 export default CeoRegister;

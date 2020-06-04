@@ -10,9 +10,9 @@ class App extends Component {
         return (
             <div>
                 <Head/>
-
                 <Body/>
                 <Foot/>
+                
                 <Route path="/posts" component={Posts}/>
             </div>
         );

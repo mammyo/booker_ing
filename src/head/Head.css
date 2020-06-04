@@ -1,46 +1,38 @@
-.header{ 
+.header { 
     width: 100%;
-   
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
 }
 
-.main_header{ 
-    background: rgb(255, 255, 255);
-     float: left; width: 100%;
-     height:auto; 
-     
-     border-right: 1px solid#d6d6d6; 
-     border-bottom: 1px solid black;
-    }
-
-
-
-.logobox{
-    background: rgb(255, 255, 255);
-
-    float: left;
-    margin-top:10px;
-    margin-left:20px;
-    padding-right: 20px;
-
-    height: 80px; 
-    width: auto;
-
-    border-right: 1px solid#d6d6d6;
+.logo {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bolder;
     
-
+    
+    margin-right: 30px;
+    
 }
 
-.logobox2{
-    width: auto;
+.logo a{
+    text-decoration: none;
+    color:black;
 }
 
-.catalog{
-    background: rgb(255, 255, 255);
-    float: left;
+.menu {
+    border-left: 1px solid black;
     font-size: 20px;
-    margin: 40px 10px 10px 10px; 
-    width: auto; height:60px;
-    
-
-
+    padding: 0 0 0 30px;    
 }
+
+.menu a {
+    display: inline-block;
+    margin-right: 50px;
+    text-decoration: none;
+    color: black;
+}
+

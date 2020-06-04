@@ -1,24 +1,61 @@
-.service-container{
-    width: 1000px;
-    margin-top : 5%; 
-    margin-bottom : 5%;
-    padding : 5%;
-    height: 1000px;
-    overflow: auto;
-    background: rgb(54, 137, 229);
-    border: 1px solid rgb(54, 137, 229);
-    border-radius: 50px;
-    text-align: text;
+
+.service_body{
+  width:100%;
+  height:800px;
+  display:flex;
+  flex-direction: row;
 }
 
-.service2-container{
-    margin-top: 5%;
-    margin-bottom: 5%;
-    padding:5%;
-    width:500px;
-    height: 500px;
-    overflow: auto;
-    background-color: white;
-    border: 1px solid rgb(54, 137, 229);
-    border-radius: 50px;
-  }
+.service_body1{
+  width:14%;
+  color: white;
+  background-color:black;
+  display:flex;
+  flex-direction: column;
+}
+.service_body1 button{
+  width : 100%;
+  color: white;
+  margin-right: 0;
+  border-bottom: 1px solid rgba(255,255,255,0.7);
+}
+
+.service_body1 button:hover{
+  background-color: rgba(231, 231, 233, 0.795);;
+}
+.service_body1 a{
+  text-decoration: none;
+}
+
+
+/* dash */
+.service_body2{
+  width:86%;
+  background-color: rgba(231, 231, 233, 0.795);
+  display:flex;
+  flex-direction: row;
+  justify-content: center;
+  
+}
+
+.service_body2_inner{
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-top: 30px;
+  padding-left:60px;
+  padding-bottom: 30px;
+  overflow: auto;
+  background-color: white;
+  width:900px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+
+#finish{
+  border: 1px solid rgb(37, 36, 41)  ;
+  border-radius: 10px;
+  float:right;
+  margin-top: 20px;
+  background-color:rgb(37, 36, 41);
+  color:white;
+}

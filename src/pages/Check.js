@@ -102,11 +102,7 @@ class Check extends Component {
 
       
       return (
-        <div className="check-container">
-          <div className="check2-container">
-
-
-
+        
             <>
 
               <BookerTemplate form={(
@@ -121,11 +117,8 @@ class Check extends Component {
                 <BookingItemList todos={todos} onToggle={handleToggle} onRemove={handleRemove} />
               </BookerTemplate>
 
-              <Bookstat id={this.id2} /></>
-
-          </div>
-        </div>
-
+              <Bookstat id={this.id2} /></>          
+        
       );
     }
   }

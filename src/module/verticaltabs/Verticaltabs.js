@@ -70,10 +70,9 @@ export default function Verticaltabs() {
         aria-label="Vertical tabs example"
         className={classes.tabs}
       >
-        <Tab label="Item One" {...a11yProps(0)} />
-        <Tab label="Item Two" {...a11yProps(1)} />
-        <Tab label="Item Three" {...a11yProps(2)} />
-        <Tab label="Item Four" {...a11yProps(3)} />
+        <Tab label="대쉬보드" {...a11yProps(0)} />
+        <Tab label="예약리스트" {...a11yProps(1)} />
+        
         
       </Tabs>
       <TabPanel value={value} index={0}>
@@ -82,9 +81,7 @@ export default function Verticaltabs() {
       <TabPanel value={value} index={1}>
         Item Two
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        Item Three
-      </TabPanel>
+      
       
     </div>
   );

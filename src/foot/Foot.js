@@ -6,7 +6,8 @@ class Body extends Component {
     render() {
         return (
             <div id="footer">
-                <div className="foot-container">create by jeonghoon</div>
+               서울특별시 역삼동 614-18 행운빌<br/> 
+               만든이 : 세 얼간이 
             </div>
         );
     }

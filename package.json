@@ -17,7 +17,8 @@
     "react-moment": "^0.9.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
-    "react-time-picker": "^4.0.1"
+    "react-time-picker": "^4.0.1",
+    "react-web-tabs": "^1.0.1"
   },
   "scripts": {
     "start": "cross-env NODE_PATH=src react-scripts start",

@@ -10,25 +10,17 @@ function Head() {
 
   };
   return (
-    <div classname="header">
+    <div className="header">
+      <div className="logo"><Link exact to="/dash">Booker-Ceo</Link></div>
 
-      <div className="main_header">
-
-        <div className="logobox">
-          <h1><Link to='/'>Booker-Ceo   </Link></h1>
-        </div>  
-        
-
-        <div>
-          <div className="catalog "><Link exact to="/" activeStyle={activeStyle}>홈</Link></div>
-          <div className="catalog"><Link exact to="/check" activeStyle={activeStyle}>예약확인</Link></div>
-          <div className="catalog"><Link exact to="/service" activeStyle={activeStyle}>서비스</Link></div>
-
-        </div>
-        
+      <div className="menu">
+        <Link exact to="/dash" activeStyle={activeStyle}>홈</Link>
+        <Link exact to="/service/service" activeStyle={activeStyle}>서비스</Link>
+        <Link exact to="/" activeStyle={activeStyle}>부커 홈</Link>
       </div>
     </div>
   );
+
 }
 
 
