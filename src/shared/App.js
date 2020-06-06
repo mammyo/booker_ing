@@ -12,8 +12,6 @@ class App extends Component {
                 <Head/>
                 <Body/>
                 <Foot/>
-                
-                <Route path="/posts" component={Posts}/>
             </div>
         );
     }

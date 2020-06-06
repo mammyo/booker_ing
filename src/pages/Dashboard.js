@@ -9,37 +9,67 @@ import { Route, Switch } from 'react-router-dom';
 
 
 
+class Dashboard extends Component {
 
-export default class Dashboard extends Component {
+    // state = {
+    //     email: '',
+    // }
 
+    // componentDidMount() {
+    //     this.callApi();
+
+    // }
+
+    // callApi = () => {
+    //     fetch('api/users')
+    //         .then(response => response.json())
+    //         .then(data =>
+    //             this.setState({
+    //                 email: data[0].id,
+    //             })
+    //         )
+    //         .catch(error => console.log(error));
+
+    //     console.log(this.state.email);
+    // }
     state = {
-        email: '',
+        image:'',
+        name:'',
+        semicategory:'',
+        explaination:''
     }
 
-    componentDidMount() {
-        this.callApi();
-
+    componentDidMount(){
+        this.callApi()
+            .catch(err => console.log(err));
     }
 
-    callApi = () => {
-        fetch('http://localhost:8080/api/users')
-            .then(response => response.json())
-            .then(data =>
-                this.setState({
-                    email: data[0].id,
-                })
-            )
-            .catch(error => console.log(error));
-
-        console.log(this.state.email);
+    callApi = async () => {
+        const response = await fetch('/api/main_category');
+        const body = await response.json();
+        this.setState({
+            image: body[0].image,
+            name: body[0].name,
+            semiCategory: body[0].semiCategory,
+            explaination: body[0].explaination,
+        });
+        console.log(this.state.name);
+        return body;
     }
+
+
 
     render() {
         return (
             <div className='dash'>
 
                 <div className='dashbody1'>
-                    <div className='dash_explain'>업체사진</div>
+                    <div className='dash_explain'>업체사진
+                    
+                        <p>{this.state.name}</p>
+                        <p>{this.state.semiCategory}</p>
+                        <p>{this.state.explaination}</p>
+</div>
                     <div className='dash_explain_box'>
                         <div className='dash_explain2'>업체설명</div>
                     </div>
@@ -67,3 +97,6 @@ export default class Dashboard extends Component {
         );
     }
 };
+
+
+export default Dashboard;
