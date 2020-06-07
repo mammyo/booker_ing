@@ -41,17 +41,17 @@ class Home extends Component {
         return (
             <div className='home_body'>
                 <div className='home_body1'>
-                    <Link exact to='/dash'><button>대쉬보드</button></Link>
-                    <Link exact to='/list'><button>예약자리스트</button></Link>
-                    <Link exact to='/prepare'><button>???</button></Link>
+                    <Link exact to='/dash/dash'><button>대쉬보드</button></Link>
+                    <Link exact to='/dash/list'><button>예약자리스트</button></Link>
+                    <Link exact to='/dash/prepare'><button>???</button></Link>
 
                 </div>
 
                 <div className='home_body2'>
                     <Switch>
-                        <Route exact path="/dash" component={Dashboard} />
-                        <Route exact path="/list" component={Check} />
-                        <Route exact path="/prepare" component={Prepare} />
+                        <Route exact path="/dash/dash" component={Dashboard} />
+                        <Route exact path="/dash/list" component={Check} />
+                        <Route exact path="/dash/prepare" component={Prepare} />
                     </Switch>
                 </div>
 

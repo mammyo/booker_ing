@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Home, About } from 'pages';
 import Check from 'pages/Check';
-import Service from 'pages/Service';
+import Env from 'pages/Env';
 import NotFound from 'pages/NotFound';
 import './Body.css';
 
@@ -12,8 +12,8 @@ class Body extends Component {
             <div id='body'>
                 
                     <Switch>
-                        <Route path="/service" component={Service} />
-                        <Route path="/" component={Home} />
+                        <Route path="/env/service" component={Env} />
+                        <Route path="/dash/dash" component={Home} />
                         <Route component={NotFound} />
                     </Switch>
 

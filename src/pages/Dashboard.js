@@ -69,7 +69,7 @@ class Dashboard extends Component {
                         <p>{this.state.name}</p>
                         <p>{this.state.semiCategory}</p>
                         <p>{this.state.explaination}</p>
-</div>
+                    </div>
                     <div className='dash_explain_box'>
                         <div className='dash_explain2'>업체설명</div>
                     </div>

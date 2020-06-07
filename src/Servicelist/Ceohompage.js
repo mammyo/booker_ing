@@ -7,7 +7,7 @@ import MenuName from './menuName';
 import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
-class CeoRegister extends Component {
+class Ceohomepage extends Component {
 
 
     minclick = () => {
@@ -21,14 +21,6 @@ class CeoRegister extends Component {
         return (
             <div className='service_body2_inner'>
                 <div id="contents">
-                    <div>
-                        <MenuName />
-                    </div>
-
-                    <div>
-                        <MenuPrice />
-                    </div>
-
                     <div>
                         <ImageSwitch />
                     </div>
@@ -59,4 +51,4 @@ class CeoRegister extends Component {
 
 
 
-export default CeoRegister;
+export default Ceohomepage;
