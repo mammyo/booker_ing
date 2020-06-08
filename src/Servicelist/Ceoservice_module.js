@@ -7,20 +7,22 @@ import MenuName from './menuName';
 import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
-class Ceoservice extends Component {
+import './Ceoservice_module.css';
+class Ceoservice_module extends Component {
 
 
     minclick = () => {
         alert("서비스 등록 \n완료되었습니다.")
-
+        window.close();
 
     }
 
 
     render() {
         return (
-            <div className='service_body2_inner'>
-                <div id="contents">
+           
+                <div className='module_box'>
+
                     <div>
                         <MenuName />
                     </div>
@@ -40,12 +42,14 @@ class Ceoservice extends Component {
 
                     <button id='finish' onClick={this.minclick}>완료</button>
 
+
                 </div>
-            </div>
+           
+
         );
     }
 }
 
 
 
-export default Ceoservice;
+export default Ceoservice_module;

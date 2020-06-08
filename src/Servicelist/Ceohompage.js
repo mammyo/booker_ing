@@ -19,7 +19,7 @@ class Ceohomepage extends Component {
 
     render() {
         return (
-            <div className='service_body2_inner'>
+            <div className='service_body3_inner'>
                 <div id="contents">
                     <div>
                         <ImageSwitch />

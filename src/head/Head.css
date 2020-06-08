@@ -9,6 +9,16 @@
     border-bottom: 1px solid black;
 }
 
+.header button{
+    padding: 10px;
+    font-size: 15px;
+    width:100%;
+    margin-left: 30%;
+    background-color: black;
+    color:white;
+    padding:0;
+}
+
 .logo {
     display: inline-block;
     font-size: 30px;
@@ -37,8 +47,9 @@
     color: black;
 }
 
-.store_box{
-    
+.empty2{
+    margin-left: 30% ;
+        
     
 }
 

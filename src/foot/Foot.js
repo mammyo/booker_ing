@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Home, About, Posts } from 'pages';
 import './Foot.css';
+import '../pages/Env.css';
 class Body extends Component {
     render() {
         return (

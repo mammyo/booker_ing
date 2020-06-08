@@ -41,12 +41,14 @@ callApi = async () => {
 
         <div className="menu">
           <Link exact to="/dash/dash" >홈</Link>
-          <Link exact to="/env/service" >설정</Link>
+          <Link exact to="/dash/env/service" >설정</Link>
         </div>
-
-        <div className='store_box'>
+        
+        <div className='empty2'>
           {this.state.name}
         </div>
+
+        <Link exact to="/" ><button>돌아가기</button></Link>
       </div>
     );
   }

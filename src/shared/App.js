@@ -8,8 +8,9 @@ import Foot from 'foot/Foot';
 import Fisrt from '../pages/Fisrt';
 import Noregist from '../pages/Noregist';
 import Ceo_regist from '../pages/Ceo_regist';
+import Env from '../pages/Env';
 import './App.css';
-
+import Ceoservice_module from '../Servicelist/Ceoservice_module';
 
 
 const a = 1;
@@ -25,7 +26,8 @@ class App extends Component {
                 <Switch>
                     <Route path="/dash" component={Fisrt} />
                     <Route path="/Ceo_regist" component={Ceo_regist} />
-                    <Route exact path="/" component={Noregist} />
+                    <Route path="/Ceoservice_module" component={Ceoservice_module} />
+                    <Route path="/" component={Noregist} />
                     
                 </Switch>
             );

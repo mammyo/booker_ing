@@ -12,8 +12,8 @@ class Body extends Component {
             <div id='body'>
                 
                     <Switch>
-                        <Route path="/env/service" component={Env} />
-                        <Route path="/dash/dash" component={Home} />
+                        <Route path="/dash/env" component={Env} />
+                        <Route path="/dash" component={Home} />
                         <Route component={NotFound} />
                     </Switch>
 
