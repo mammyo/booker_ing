@@ -41,5 +41,10 @@
     background-color:rgb(79, 84, 87);
 }
 
+.choose button a{
+    text-decoration: none;
+    color: white;
+}
+
  
 

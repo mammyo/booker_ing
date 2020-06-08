@@ -7,13 +7,11 @@ import Head from '../head/Head';
 
 
 
-function Name(name){
-     console.log(name)
-}
 
 
 function Fruit({ name }) {
-    return <button onClick={Name(name)}><Link exact to='/dash/dash'> {name}</Link></button>
+    
+    return <button><Link exact to='/dash/dash' > {name}</Link></button>
 }
 
 
@@ -27,10 +25,20 @@ const temp = [{
 
 
 class Noregist extends Component {
+
+    constructor(){
+        super();
+    }
     state={
         name : ''
     }
 
+
+    busregist=()=>{
+        window.open('Ceo_regist','ot','width=800, height=600, status=no,resizable=no');
+    }
+
+    
 
     render() {
         return (
@@ -40,7 +48,7 @@ class Noregist extends Component {
                     <h6>등록한 사업지를 선택해주세요</h6>
                     <div className='choose'>
                         {temp.map(element => <Fruit name={element.name} />)}
-                        <button style={{width :"100px"}}> + </button>
+                        <button style={{width :"100px"}} onClick={this.busregist}> + </button>
                     </div>
 
                 </div>
