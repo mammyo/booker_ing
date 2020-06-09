@@ -7,19 +7,26 @@ import NotFound from 'pages/NotFound';
 import './Body.css';
 
 class Body extends Component {
+    constructor(props){
+        super(props);
+    }
+        
+
     render() {
         return (
             <div id='body'>
                 
                     <Switch>
-                        <Route path="/dash/env" component={Env} />
-                        <Route path="/dash" component={Home} />
+                        <Route path={`/${this.props.uname}/env`} render={() => <Env subname={this.props.uname} />}/> />
+                        <Route path={`/${this.props.uname}`} render={() => <Home subname={this.props.uname} />}/> />
+
                         <Route component={NotFound} />
                     </Switch>
 
             </div>
         );
     }
+    
 }
 
 export default Body

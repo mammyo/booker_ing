@@ -24,7 +24,7 @@ class Comment extends Component {
   <div>
         <input 
          
-          placeholder="설명? 소개?"
+          placeholder="입력하세요"
           value={this.state.name}
           onChange={this.handleChange}
         />

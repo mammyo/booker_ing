@@ -10,50 +10,65 @@ import Ceo_regist from './Ceo_regist';
 
 
 function Fruit({ name }) {
-    
-    return <button><Link exact to='/dash' > {name}</Link></button>
+    return <button><Link exact to={`/${name}`}>{name}</Link></button>
 }
-
-
-const temp = [{
-    name: '민이 분식'
-},
-{ name: 'Min피시방' },
-]
-
-
 
 
 class Noregist extends Component {
 
-    constructor(){
-        super();
-    }
-    state={
-        name : ''
+    state = {
+        Ceolist: [],
     }
 
 
-    busregist=()=>{
-        window.open('Ceo_regist','ot','width=800, height=600, status=no,resizable=no');
+
+    componentDidMount() {
+        this.callApi();
+
+    }
+
+    callApi = () => {
+        fetch('http://localhost:8080/jpa/ceo')
+            .then(response => response.json())
+            .then(data => 
+                this.setState({
+                    Ceolist :data.map(num =>{return num.busname}),
+                })
+                
+                /*
+                console.log(data);
+                var ceolist=[];
+                ceolist = data.map(num =>{return num.busname})
+                this.setState({
+                    Ceolist :data.map(num =>{return num.busname}),
+                })
+                */
+                
+            )
+            .catch(error => console.log(error))
+
+    }
+
+
+    busregist = () => {
+        window.open('Ceo_regist', 'ot', 'width=800, height=600, status=no,resizable=no');
     }
 
     handleCreate = (data) => {
         console.log(data);
-      }
+    }
 
-    
+
 
     render() {
-        
+        console.log(this.state.Ceolist);
         return (
             <div class="img">
                 <div class="content">
-
                     <h6>등록한 사업지를 선택해주세요</h6>
                     <div className='choose'>
-                        {temp.map(element => <Fruit name={element.name} />)}
-                        <button style={{width :"100px"}} onClick={this.busregist}> + </button>
+                        {this.state.Ceolist.map(element => <Fruit name={element} />)}
+                        <button style={{ width: "100px" }} onClick={this.busregist}> + </button>
                         {/* <Ceo_regist onCreate={this.handleCreate}/> */}
                     </div>
 

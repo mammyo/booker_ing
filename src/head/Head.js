@@ -8,44 +8,23 @@ import Noregist from '../pages/Noregist';
 
 class Head extends React.Component {
 
-  state = {
-    image:'',
-    name:'',
-    semicategory:'',
-    explaination:''
-}
-
-componentDidMount(){
-    this.callApi()
-        .catch(err => console.log(err));
-}
-
-callApi = async () => {
-    const response = await fetch('/api/main_category');
-    const body = await response.json();
-    this.setState({
-        image: body[0].image,
-        name: body[0].name,
-        semiCategory: body[0].semiCategory,
-        explaination: body[0].explaination,
-    });
-    console.log(this.state.name);
-    return body;
+constructor(props){
+  super(props);
 }
 
 
   render() {
     return (
       <div className="header">
-        <div className="logo"><Link exact to="/dash/dash">Booker-Ceo</Link></div>
+        <div className="logo"><Link exact to={`/${this.props.uname}/dash/dash`}>Booker-Ceo</Link></div>
 
         <div className="menu">
-          <Link exact to="/dash/dash" >홈</Link>
-          <Link exact to="/dash/env/service" >설정</Link>
+          <Link exact to={`/${this.props.uname}`} >홈</Link>
+          <Link exact to={`/${this.props.uname}/env/service`} >설정</Link>
         </div>
         
         <div className='empty2'>
-          {this.state.name}
+            {this.props.uname}
         </div>
 
         <Link exact to="/" ><button>돌아가기</button></Link>

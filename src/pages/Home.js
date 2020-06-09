@@ -8,12 +8,16 @@ import Check from './Check';
 import { Route, Switch } from 'react-router-dom';
 import Dashboard from './Dashboard.js';
 import Prepare from './Prepare.js';
+import Notice from './Notice.js';
 
 
 
 
 
 class Home extends Component {
+    constructor(props){
+        super(props);
+    }
 
     state = {
         email: '',
@@ -38,20 +42,22 @@ class Home extends Component {
     }
 
     render() {
+        console.log(this.props.subname);
         return (
             <div className='home_body'>
                 <div className='home_body1'>
-                    <Link exact to='/dash/dash'><button>대쉬보드</button></Link>
-                    <Link exact to='/dash/list'><button>예약자리스트</button></Link>
-                    <Link exact to='/dash/prepare'><button>???</button></Link>
+                    <Link exact to={`/${this.props.subname}/dash/dash`}><button>대쉬보드</button></Link>
+                    <Link exact to={`/${this.props.subname}/dash/list`}><button>예약자리스트</button></Link>
+                    <Link exact to={`/${this.props.subname}/dash/prepare`}><button>???</button></Link>
 
                 </div>
 
                 <div className='home_body2'>
                     <Switch>
-                        <Route exact path="/dash/dash" component={Dashboard} />
-                        <Route exact path="/dash/list" component={Check} />
-                        <Route exact path="/dash/prepare" component={Prepare} />
+                        <Route path={`/${this.props.subname}/dash/dash`} component={Dashboard} />
+                        <Route path={`/${this.props.subname}/dash/list`} component={Check} />
+                        <Route path={`/${this.props.subname}/dash/prepare`} component={Prepare} />
+                        <Route path={`/${this.props.subname}`} component={Notice} />
                     </Switch>
                 </div>
 

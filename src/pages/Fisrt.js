@@ -9,20 +9,20 @@ import Body from 'body/Body';
 import Foot from 'foot/Foot';
 import Ceoservice_module from '../Servicelist/Ceoservice_module';
 
-class First extends Component {
-    render() {
-        return(
-            
-        <center>
-            <Head />
-            <Body />
-            <Foot />
-        </center>
-       
-        
-        )
-    }
+const First = ({ match }) => {
 
+    const test = match.params.uname;
+    console.log(test);
+    return (
+
+        <center>
+
+            <Head uname={match.params.uname}/>
+            <Body uname={match.params.uname}/>
+            <Foot uname={match.params.uname}/>
+        </center>
+
+    );
 }
 
 

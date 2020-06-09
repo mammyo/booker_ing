@@ -24,9 +24,9 @@ class App extends Component {
         if (a == 1) {
             return (
                 <Switch>
-                    <Route path="/dash" component={Fisrt} />
                     <Route path="/Ceo_regist" component={Ceo_regist} />
                     <Route path="/Ceoservice_module" component={Ceoservice_module} />
+                    <Route path="/:uname" component={Fisrt} />
                     <Route path="/" component={Noregist} />
                     
                 </Switch>

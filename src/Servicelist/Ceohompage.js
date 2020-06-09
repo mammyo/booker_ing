@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './main.css'
+import './Ceohompage.css'
 import CalendarSwitch from './calendarToggle';
 import Time from './time'
 import Time2 from './time2';
@@ -7,8 +7,8 @@ import MenuName from './menuName';
 import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
+import CouponToggle from './couponToggle';
 class Ceohomepage extends Component {
-
 
     minclick = () => {
         alert("완료되었습니다.")
@@ -16,34 +16,35 @@ class Ceohomepage extends Component {
 
     }
 
-
     render() {
         return (
-            <div className='service_body3_inner'>
-                <div id="contents">
-                    <div>
-                        <ImageSwitch />
-                    </div>
-
-                    <div>
-                        <CommentSwitch />
-                    </div>
-
-                    <div>
-                        <CalendarSwitch />
-                    </div>
-
-                    <div>
-                        <Time />
-                    </div>
-
-                    <div>
-                        <Time2 />
-                    </div>
-
-                    <button id='finish' onClick={this.minclick}>완료</button>
-
+            <div className='homepage_box'>
+                <div>
+                    <ImageSwitch />
                 </div>
+
+                <div>
+                    <CommentSwitch />
+                </div>
+
+                <div>
+                    <CalendarSwitch />
+                </div>
+
+                <div>
+                    <Time />
+                </div>
+
+                <div>
+                    <Time2 />
+                </div>
+
+                <div>
+                    <CouponToggle />
+                </div>
+
+                <button className='homepage_button' onClick={this.minclick}>완료</button>
+
             </div>
         );
     }

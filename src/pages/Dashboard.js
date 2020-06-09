@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './Dashboard.css';
-
+import Product_image from '../images/Product.PNG';
+import Template_image from '../images/Template.png';
+import Prepare_image from '../images/prepare.PNG';
 import { NavLink } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import Check from './Check';
@@ -64,14 +66,13 @@ class Dashboard extends Component {
             <div className='dash'>
 
                 <div className='dashbody1'>
-                    <div className='dash_explain'>업체사진
-                    
-                        <p>{this.state.name}</p>
-                        <p>{this.state.semiCategory}</p>
-                        <p>{this.state.explaination}</p>
+                    <div className='dash_explain'>
+                    <img src={Prepare_image} width="100%" height="100%"></img>
                     </div>
                     <div className='dash_explain_box'>
-                        <div className='dash_explain2'>업체설명</div>
+                        <div className='dash_explain2'>
+                            <li>Use Booker</li>
+                        </div>
                     </div>
                 </div>
 
@@ -85,12 +86,12 @@ class Dashboard extends Component {
 
                     <div className='dash_unit-box'>
                         <div className='dash_inner-title'>Week</div>
-                        <div className='dash_inner-box'>1명</div>
+                        <div className='dash_inner-box'>6명</div>
                     </div>
 
                     <div className='dash_unit-box'>
                         <div className='dash_inner-title'>Month</div>
-                        <div className='dash_inner-box'>1명</div>
+                        <div className='dash_inner-box'>30명</div>
                     </div>
                 </div>
             </div>

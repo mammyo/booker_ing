@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Ceo_regist.css';
 import Noregist from './Noregist';
+import {post} from 'axios';
 
 
 
@@ -12,7 +13,9 @@ class Ceo_regist extends Component {
     }
 
     close = () => {
+        window.opener.location.href = "http://localhost:3000";
         window.close()
+        
     }
 
     handleChange = (e) => {
@@ -23,18 +26,28 @@ class Ceo_regist extends Component {
     }
 
     handleSubmit = (e) => {
-        // 페이지 리로딩 방지
-        e.preventDefault();
-        // 상태값을 onCreate 를 통하여 부모에게 전달
-        this.props.onCreate(this.state);
-
-        
-        // 상태 초기화
+        e.preventDefault()
+        this.addCustomer()
+            .then((response) => {
+                console.log(response.data);
+        })
         this.setState({
-            name: '',
-            phone: ''
+            busName: '',
+           
         })
         
+    }
+
+    addCustomer =() => {
+        const url = 'http://localhost:8080/jpa/ceo';
+        const data = {
+            busname: this.state.busName,
+           
+        };
+        const header = {
+            'Content-Type': 'application/json'
+        };
+        return post(url, data, header);
     }
 
 
@@ -65,7 +78,8 @@ class Ceo_regist extends Component {
                             </div>
 
                             <div className="login_check">
-                                <button className="login_check_btn" onClick={this.close} type="submit">등록하기</button>
+                                <button className="login_check_btn" onClick={this.close} type="submit">
+                                    등록하기</button>
                             </div>
 
                         </form>

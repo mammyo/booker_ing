@@ -48,7 +48,14 @@
 }
 
 .empty2{
-    margin-left: 30% ;
+    text-align: end;
+    padding-top: 20px;
+    width:30%;
+    height: 25px;
+    margin-left: 5%;
+    font-size: 18px;
+    /* background-color: rgba(0,0,0,0.2); */
+    
         
     
 }
