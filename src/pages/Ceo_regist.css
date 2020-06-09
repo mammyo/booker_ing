@@ -12,6 +12,18 @@
     margin-bottom: 10px;
 }
 
+.radio{
+    margin-top: 50px;
+    font-size: 25px;
+}
+.radio button{
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+
+    color:black;
+}
+
 .login_cont_cont{
     width:70%;
     height:1300px;
@@ -33,7 +45,7 @@
 }
 
 .login_id{
-    margin-top:20px;
+    margin-top:-10px;
 }
 
 .login_id_input{

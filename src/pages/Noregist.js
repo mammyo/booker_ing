@@ -51,7 +51,7 @@ class Noregist extends Component {
 
 
     busregist = () => {
-        window.open('Ceo_regist', 'ot', 'width=800, height=600, status=no,resizable=no');
+        window.open('Ceo_regist', 'ot', 'width=800, height=600');
     }
 
     handleCreate = (data) => {

@@ -5,61 +5,48 @@ import Comment from './comment.js';
 
 class CommentSwitch extends React.Component {
 
-    constructor ( props ) {
-        super( props );
-		
-		this.state = {
+    constructor(props) {
+        super(props);
+
+        this.state = {
             isChecked: null
-            
+
         }
         this.state = { isShown: false };
     }
-	
-	componentWillMount () {
-        this.setState( { isChecked: this.props.isChecked } );
-       
-	}
-      
+
+    componentWillMount() {
+        this.setState({ isChecked: this.props.isChecked });
+
+    }
+
 
     toggleText = () => {
         const { isShown } = this.state;
         this.setState({ isShown: !isShown });
-        console.log("toggle"+ isShown);
-      };
+        console.log("toggle" + isShown);
+        this.props.onClick(this.state.isShown);
+    };
 
-    render () {
+    render() {
 
         const { isShown } = this.state;
 
-        return(
+        return (
             <div className="switch-container">
-                      <h3>-설명란</h3>
-                <label>
-               
-                    <input ref="switch"  
+                <h3>업종 설명</h3>
 
-                    checked={ this.state.isChecked }    
-                    onChange={this.toggleText} className="switch" type="checkbox" 
-                    />                 
-                    <div>                 
-                        <div></div>
-                    </div>
-                    
-                
-                   
-                </label> 
 
-                 <div >
 
-                    {isShown && <Comment/> }
-                </div>
-                    
+                <Comment />
+
+
             </div>
         );
     }
 
 
-    
+
 }
 
 

@@ -25,6 +25,7 @@ class CouponToggle extends React.Component {
         const { isShown } = this.state;
         this.setState({ isShown: !isShown });
         console.log("toggle"+ isShown);
+        this.props.onClick(this.state.isShown);
       };
 
     render () {

@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import { Route, Switch } from 'react-router-dom';
 import Prepare from './Prepare.js';
 import Template from './Template.js';
+import Reservepage from '../Servicelist/Reservepage.js';
 
 
 
@@ -23,7 +24,8 @@ class Env extends Component {
                     <Link exact to={`/${this.props.subname}/env/service`}><button>서비스</button></Link>
 
                     <Link exact to={`/${this.props.subname}/env/homepage`}><button>홈페이지</button></Link>
-                    <Link exact to={`/${this.props.subname}/env/template`}><button>템플릿</button></Link>
+                    <Link exact to={`/${this.props.subname}/env/reservepage`}><button>예약페이지</button></Link>
+                    <Link exact to={`/${this.props.subname}/env/template`}><button>템플릿 보기</button></Link>
                     <Link exact to={`/${this.props.subname}/env/prepare`}><button>???</button></Link>
                 </div>
 
@@ -31,6 +33,7 @@ class Env extends Component {
                     <Switch>
                         <Route path={`/${this.props.subname}/env/service`} component={Ceoservice} />
                         <Route exact path={`/${this.props.subname}/env/homepage`} component={Ceohomepage} />
+                        <Route exact path={`/${this.props.subname}/env/reservepage`} component={Reservepage} />
                         <Route exact path={`/${this.props.subname}/env/template`} component={Template} />
                         {/* <Route exact path="/list" component={Check} /> */}
                     </Switch>

@@ -8,13 +8,9 @@ import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
 import CouponToggle from './couponToggle';
-class Ceohomepage extends Component {
+class Reservepage extends Component {
     state={
-        setimage:'X',
-        setcommnet:'X',
-        setcalendar:'X',
-        settime1:'',
-        settime2:'',
+        
         setcoupon:'X',
     
     }
@@ -23,47 +19,23 @@ class Ceohomepage extends Component {
         alert("완료되었습니다.")
     }
 
-    onsetimage=(text)=>{
+
+
+    onsetcoupon=(text)=>{
         this.setState({
-            setimage: (text==false) ? "O" : "X",
+            setcoupon: (text==false) ? "O" : "X",
         })
     }
-
-    onsetcomment=(text)=>{
-        this.setState({
-            setcommnet: (text==false) ? "O" : "X",
-        })
-    }
-
-    onsecalendar=(text)=>{
-        this.setState({
-            setcalendar: (text==false) ? "O" : "X",
-        })
-    }
-
-    
 
 
     render() {
         console.log(this.state);
         return (
             <div className='homepage_box'>
+                
                 <div>
-                    <ImageSwitch onClick={this.onsetimage}/>
+                    <CouponToggle onClick={this.onsetcoupon}/>
                 </div>
-
-                <div>
-                    <CommentSwitch onClick={this.onsetcomment}/>
-                </div>
-
-                <div>
-                    <Time />
-                </div>
-
-                <div>
-                    <Time2 />
-                </div>
-
 
                 <button className='homepage_button' onClick={this.minclick}>완료</button>
 
@@ -74,4 +46,4 @@ class Ceohomepage extends Component {
 
 
 
-export default Ceohomepage;
+export default Reservepage;

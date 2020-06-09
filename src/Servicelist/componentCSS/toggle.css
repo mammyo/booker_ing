@@ -3,10 +3,16 @@
 	/*absoulte시 위치 고정 중복생성해도 같은지점에 계속 생기는듯*/
 	
 	position: relative;
-	
-	
 
+}
+.switch-container h3{
+	margin-left: 0;
+	margin-bottom: 0;
+}
 
+.switch-container h4{
+	margin-left: 0;
+	margin-top: 10px;
 }
 
 input[type="checkbox"].switch  { 

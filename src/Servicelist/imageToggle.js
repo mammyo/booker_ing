@@ -1,40 +1,63 @@
 import React from 'react';
 import './componentCSS/toggle.css';
-import ImageUpload from './upload.js';
+import ImageUpload from './ImageUpload.js';
 
 
 class ImageSwitch extends React.Component {
 
-    constructor ( props ) {
-        super( props );
-		
-		this.state = {
+    constructor(props) {
+        super(props);
+
+        this.state = {
             isChecked: null
-            
+
         }
         this.state = { isShown: false };
     }
-	
-	componentWillMount () {
-        this.setState( { isChecked: this.props.isChecked } );
-       
-	}
-      
+
+    componentWillMount() {
+        this.setState({ isChecked: this.props.isChecked });
+
+    }
+
 
     toggleText = () => {
         const { isShown } = this.state;
         this.setState({ isShown: !isShown });
-        console.log("toggle"+ isShown);
-      };
+        console.log("toggle" + this.state.isShown);
+        this.props.onClick(this.state.isShown);
+    };
 
-    render () {
+    render() {
 
         const { isShown } = this.state;
 
-        return(
+        return (
             <div className="switch-container">
-                   <h3>-이미지 등록</h3>
-                <label>
+                <h3>이미지 등록 </h3>
+                <h4>-홈페이지 3개</h4>
+
+                <h4>-예약페이지 1개</h4>
+                
+
+                     <ImageUpload />
+                     <ImageUpload />
+                     <ImageUpload />
+                
+
+            </div>
+        );
+    }
+
+
+
+}
+
+
+export default ImageSwitch;
+
+
+{/* <label>
              
                     <input ref="switch"  
 
@@ -46,21 +69,5 @@ class ImageSwitch extends React.Component {
                     </div>
                     
                 
-                   
-                </label> 
-
-                 <div >
-
-                    {isShown && <ImageUpload/> }
-                </div>
-                    
-            </div>
-        );
-    }
-
-
-    
-}
-
-
-export default ImageSwitch;
+                
+                </label>  */}
