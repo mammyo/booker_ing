@@ -5,12 +5,14 @@ import { post } from 'axios';
 import Postcode from '../Servicelist/kakaoAddress';
 
 
+
+
 class Ceo_regist extends Component {
 
     state = {
         category: '',
         busName: '',
-        busAddress:'',
+        busAddress: '',
         busNo: '',
 
     }
@@ -28,16 +30,29 @@ class Ceo_regist extends Component {
         console.log(this.state);
     }
 
+    hadleAddress = (e) => {
+        this.setState({
+            busAddress: e.target.value
+        })
+        console.log(this.state);
+    }
+
     handleSubmit = (e) => {
-        e.preventDefault()
+        // e.preventDefault()
         this.addCustomer()
             .then((response) => {
                 console.log(response.data);
             })
         this.setState({
+            category: '',
             busName: '',
+            busAddress: '',
+            busNo: '',
 
         })
+
+        this.close()
+        console.log(this.state);
 
     }
 
@@ -45,6 +60,9 @@ class Ceo_regist extends Component {
         const url = 'http://localhost:8080/jpa/ceo';
         const data = {
             busname: this.state.busName,
+            busaddress: this.state.busAddress,
+            busnumber: this.state.busNo,
+            category: this.state.category,
 
         };
         const header = {
@@ -60,79 +78,80 @@ class Ceo_regist extends Component {
 
     }
 
-    address=() => {
-        window.open('address', 'address', 'width=500, height=600');
+    address = () => {
+        window.open('address', 'address', 'width=600, height=600');
     }
 
-    
+    addressalert = (text) => {
+        alert(text);
+    }
 
+    receiveMessage = (address) => {
+        this.setState({
+            busAddress: address.data
+        })
+    }
+
+    componentDidMount() {
+        window.addEventListener("message", this.receiveMessage, false);
+    }
 
     render() {
-        console.log(this.state.category);
+        console.log(this.state);
         return (
             <div className="login_cont">
                 <div className="login_cont_cont">
-
                     <div className="login_logo">
-                        <form onSubmit={this.handleSubmit}>
-                            <h6>사업자 등록하기</h6>
 
+                        <h6>사업자 등록하기</h6>
 
+                        <div className='radio'>
+                            <input type="radio" value="음식점" checked={this.state.category === '음식점'} onChange={this.optionchange} />
+                            <button value="음식점" onClick={this.optionchange}>음식점</button>
 
-                            <div className='radio'>
+                            <input type="radio" value="미용실" checked={this.state.category === '미용실'} onChange={this.optionchange} />
+                            <button value="미용실" onClick={this.optionchange}>미용실</button>
 
-                                <input type="radio" value="음식점" checked={this.state.category === '음식점'} onChange={this.optionchange} />
-                                <button value="음식점" onClick={this.optionchange}>음식점</button>
+                            <input type="radio" value="헬스장" checked={this.state.category === '헬스장'} onChange={this.optionchange} />
+                            <button value="헬스장" onClick={this.optionchange}>헬스장</button>
 
-                                <input type="radio" value="미용실" checked={this.state.category === '미용실'} onChange={this.optionchange} />
-                                <button value="미용실" onClick={this.optionchange}>미용실</button>
+                            <input type="radio" value="PC방" checked={this.state.category === 'PC방'} onChange={this.optionchange} />
+                            <button value="PC방" onClick={this.optionchange}>PC방</button>
+                        </div>
 
-                                <input type="radio" value="헬스장" checked={this.state.category === '헬스장'} onChange={this.optionchange} />
-                                <button value="헬스장" onClick={this.optionchange}>헬스장</button>
+                        <div className="login_id">
+                            <input className="login_id_input" placeholder="등록할 사업자명"
+                                name="busName"
+                                value={this.state.name}
+                                onChange={this.handleChange} />
+                        </div>
 
-                                <input type="radio" value="PC방" checked={this.state.category === 'PC방'} onChange={this.optionchange} />
-                                <button value="PC방" onClick={this.optionchange}>PC방</button>
+                        <div className="login_address">
+                            <input id="login_address_input" placeholder="주소 검색"
+                                name="busAddress"
 
-                            </div>
+                                value={this.state.address}
+                                onChange={this.hadleAddress} />
+                            <button onClick={this.address}>검색</button>
+                        </div>
 
-
-
-                            <div className="login_id">
-                                <input className="login_id_input" placeholder="등록할 사업자명"
-                                    name="busNayme"
-                                    value={this.state.name}
-                                    onChange={this.handleChange} />
-                            </div>
-
-
-                            <div className="login_pwd">
-                                <input className="login_pwd_input" placeholder="주소 검색"
-                                    name="busAddress"
-                                    value={this.state.name}
-                                    onChange={this.handleChange} />
-                                    <button onClick={this.address}>검색</button>
-                            </div>
-
-                            {/* <div>
+                        {/* <div>
                                 <Postcode/>
                             </div> */}
 
-                            <div className="login_pwd">
-                                <input className="login_pwd_input" placeholder="사업자 등록번호"
-                                    name="busNo"
-                                    value={this.state.name}
-                                    onChange={this.handleChange} />
-                                
-                                <button>중복</button>
-                            </div>
+                        <div className="login_pwd">
+                            <input className="login_pwd_input" placeholder="사업자 등록번호"
+                                name="busNo"
+                                value={this.state.name}
+                                onChange={this.handleChange} />
 
+                            <button>중복</button>
+                        </div>
 
-                            <div className="login_check">
-                                <button className="login_check_btn" onClick={this.close} type="submit">
-                                    등록하기</button>
-                            </div>
-
-                        </form>
+                        <div className="login_check">
+                            <button className="login_check_btn" onClick={this.handleSubmit}>
+                                등록하기</button>
+                        </div>
 
                     </div>
                 </div>
@@ -142,3 +161,5 @@ class Ceo_regist extends Component {
 }
 
 export default Ceo_regist;
+
+//<input type="text" id="receiveFromChild" value=""/>

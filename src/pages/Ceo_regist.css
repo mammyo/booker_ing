@@ -56,6 +56,39 @@
   
 }
 
+.login_address{
+
+}
+
+#login_address_input{
+    border: 1px solid rgb(34, 28, 28);
+    width:350px;
+    height: 3rem;
+    font-size: 15px;
+    margin-top: 10px;
+    
+    
+}
+
+.login_address button{
+    font-size: 15px;
+    color: white;
+    background-color:rgb(34, 28, 28);
+    margin-right:10px ;
+    margin-left: -80px;
+    
+}
+.login_address_btn{
+    font-size: 20px;
+    font-weight: bolder;
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(34, 28, 28);;
+    background-color:rgb(34, 28, 28);
+    margin:auto;
+    width:350px;
+    height: 4rem;
+}
+
 .login_pwd{
 
 }
