@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './Ceoservice_module.css';
 
 class MenuPrice extends Component {
   state = {
@@ -28,7 +29,7 @@ class MenuPrice extends Component {
           onChange={this.handleChange}
         />
        
-      <button onClick={this.handleClick} >click</button>
+      <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
 
       </div>
     );

@@ -34,14 +34,10 @@ class ImageSwitch extends React.Component {
 
         return (
             <div className="switch-container">
-                <h3>이미지 등록 </h3>
-                <h4>-홈페이지 3개</h4>
-
-                <h4>-예약페이지 1개</h4>
+                
                 
 
-                     <ImageUpload />
-                     <ImageUpload />
+                    
                      <ImageUpload />
                 
 

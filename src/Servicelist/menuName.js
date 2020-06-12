@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import './Ceoservice_module.css';
 
 class MenuName extends Component {
   state = {
-    name: ' '
+    name: ''
   }
   handleChange = (e) => {
     this.setState({
@@ -28,7 +29,7 @@ class MenuName extends Component {
           onChange={this.handleChange}
         />
   
-      <button onClick={this.handleClick} >click</button>
+      <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
      
       </div>
     );

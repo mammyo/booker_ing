@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './main.css'
+import './Ceohompage.css'
 import CalendarSwitch from './calendarToggle';
 import Time from './time'
 import Time2 from './time2';

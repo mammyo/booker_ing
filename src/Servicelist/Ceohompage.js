@@ -87,9 +87,9 @@ class Ceohomepage extends Component {
 
 
     uploadpic1 = (text) => {
-        this.setState({
-            img1: 
-        })
+        // this.setState({
+        //     img1: 
+        // })
     }
 
     uploadpic2 = (text) => {
