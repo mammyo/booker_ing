@@ -26,7 +26,7 @@ class Env extends Component {
                     <Link exact to={`/${this.props.subname}/env/homepage`}><button>홈페이지</button></Link>
                     <Link exact to={`/${this.props.subname}/env/reservepage`}><button>예약페이지</button></Link>
                     <Link exact to={`/${this.props.subname}/env/template`}><button>템플릿 보기</button></Link>
-                    <Link exact to={`/${this.props.subname}/env/prepare`}><button>???</button></Link>
+                    
                 </div>
 
                 <div className='service_body2'>

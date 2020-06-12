@@ -28,7 +28,7 @@ class Noregist extends Component {
     }
 
     callApi = () => {
-        fetch('http://localhost:8080/jpa/ceo')
+        fetch('http://59.29.224.90:8080/jpa/ceo')
             .then(response => response.json())
             .then(data => 
                 this.setState({

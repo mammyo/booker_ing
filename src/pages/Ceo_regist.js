@@ -57,7 +57,7 @@ class Ceo_regist extends Component {
     }
 
     addCustomer = () => {
-        const url = 'http://localhost:8080/jpa/ceo';
+        const url = 'http://59.29.224.90:8080/jpa/ceo';
         const data = {
             busname: this.state.busName,
             busaddress: this.state.busAddress,

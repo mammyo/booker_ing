@@ -1,7 +1,7 @@
 import React from 'react';
 import './componentCSS/upload.css';
 
-class ImageUpload extends React.Component {
+class ImageUpload2 extends React.Component {
     constructor(props) {
       super(props);
       this.state = {file: '',imagePreviewUrl: ''};
@@ -11,7 +11,7 @@ class ImageUpload extends React.Component {
       e.preventDefault();
       // TODO: do something with -> this.state.file
       console.log('handle uploading-', this.state.file);
-      this.props.pic1(this.state.file);
+      this.props.pic2(this.state.file);
     }
   
     _handleImageChange(e) {
@@ -57,4 +57,4 @@ class ImageUpload extends React.Component {
     }
   }
     
-export default ImageUpload;
+export default ImageUpload2;

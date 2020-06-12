@@ -90,6 +90,7 @@ class Postcode extends Component {
   sendaddress = (e) =>{
     window.opener.document.getElementById("login_address_input").value = this.state.address
     window.opener.postMessage(this.state.address);
+    window.close();
   }
 
 

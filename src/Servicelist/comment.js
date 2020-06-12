@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './componentCSS/comment.css';
+import './Ceohompage.css';
 
 class Comment extends Component {
   state = {
@@ -29,7 +30,7 @@ class Comment extends Component {
           onChange={this.handleChange}
         />
        
-      <button onClick={this.handleClick} >click</button>
+      <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
 
       </div>
     );

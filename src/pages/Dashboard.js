@@ -12,56 +12,52 @@ import { Route, Switch } from 'react-router-dom';
 
 
 class Dashboard extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            businessnumber:'',
+            day: '',
+        }
 
-    // state = {
-    //     email: '',
-    // }
-
-    // componentDidMount() {
-    //     this.callApi();
-
-    // }
-
-    // callApi = () => {
-    //     fetch('api/users')
-    //         .then(response => response.json())
-    //         .then(data =>
-    //             this.setState({
-    //                 email: data[0].id,
-    //             })
-    //         )
-    //         .catch(error => console.log(error));
-
-    //     console.log(this.state.email);
-    // }
-    state = {
-        image:'',
-        name:'',
-        semicategory:'',
-        explaination:''
     }
 
-    componentDidMount(){
-        this.callApi()
-            .catch(err => console.log(err));
-    }
-
-    callApi = async () => {
-        const response = await fetch('/api/main_category');
-        const body = await response.json();
+    componentWillMount(){
+        console.log("componentWillMount");
         this.setState({
-            image: body[0].image,
-            name: body[0].name,
-            semiCategory: body[0].semiCategory,
-            explaination: body[0].explaination,
-        });
-        console.log(this.state.name);
-        return body;
+            businessnumber: this.props.businessnumber
+        })
+        this.callApi(this.props.businessnumber);
+      }
+
+    
+    
+    
+
+    
+
+    callApi = (data) => {
+        fetch(`http://59.29.224.90:8080/jpa/book/${data}`)
+            .then(response => response.json())
+            .then(data =>
+                
+                    this.setState({
+                        day : data.length,
+                    })
+                
+            )
+            .catch(error => console.log(error));
+
+        console.log(this.state.day);
     }
+    
 
 
 
     render() {
+        console.log(this.props.businessnumber);
+        console.log(this.state.day);
+        
+        
         return (
             <div className='dash'>
 
@@ -81,7 +77,7 @@ class Dashboard extends Component {
                 <div className='dashbody2'>
                     <div className='dash_unit-box'>
                         <div className='dash_inner-title'>Today</div>
-                        <div className='dash_inner-box'>1명</div>
+                        <div className='dash_inner-box'>{this.state.day}명</div>
                     </div>
 
                     <div className='dash_unit-box'>

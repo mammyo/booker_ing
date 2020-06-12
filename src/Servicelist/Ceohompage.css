@@ -14,9 +14,21 @@
     
   }
 
-.homepage_button{
-border: 1px solid rgb(37, 36, 41)  ;
+.homepage_click_bt{
+  background-color:rgb(37, 36, 41);
+  border: 1px solid rgb(37, 36, 41)  ;
   border-radius: 10px;
+  margin-right: 5px;
+  margin-left: 10px;
+  color:white;
+  font-size: 15px;
+
+}
+.homepage_button{
+  border: 1px solid rgb(37, 36, 41)  ;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom : 20px;
   float:right;
   background-color:rgb(37, 36, 41);
   color:white;
