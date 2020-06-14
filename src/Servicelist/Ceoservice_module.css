@@ -1,3 +1,22 @@
+.mou_box{
+  position:relative;
+  margin:auto;
+  width: 90%;
+  height: 90%;
+  
+  
+
+}
+
+.mou_title{
+  margin-top: 3%;
+  text-align: left;
+  margin-left: 2%;
+  margin-bottom: -3%;
+  font-size: 30px;
+  font-weight: bold;
+}
+
 
 .module_box{
     
@@ -10,6 +29,7 @@
     background-color: white;
     width:80%;
     text-align: left;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    z-index: 2;
+    border: 5px solid rgb(97, 64, 64);
+    border-radius: 8px;
+    
   }

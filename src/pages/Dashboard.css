@@ -1,56 +1,82 @@
+.dash_box{
+    position:relative;
+    margin:auto;
+    width: 90%;
+    height: 90%;
+
+}
+
+.dash_title{
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
 
 
 .dash{
     display: flex;
     flex-direction: row;
+    justify-content:center;
+    
 }
 
 .dashbody1{
-    width:600px;
+    width:60%;
     display:flex;
     flex-direction: column;
-    margin-right: 50px;
+    margin-right: 40px;
     
 
 }
 .dashbody2{
-    width: 200px;
+    width: 20%;
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
+    margin-top: 70px;
     margin-bottom: 100px;
     padding-left: 30px;
     
     justify-content: space-around;
-    border-left:1px solid gray
+    border-left:2px solid rgb(97, 64, 64)
 }
 
+.dash_second_title{
+    text-align: left;
+    margin-top: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+}
 
 .dash_explain{
-    margin-top: 50px;
+    margin-top: 1%;
     width: 100%;
     height:320px;
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-    
+    border: 5px solid rgb(97, 64, 64);
+    border-radius: 8px;
     
 }
 
 
 .dash_explain_box{
-    margin-top: 50px;
-    border-top: 1px solid gray;
+    margin-top: 6%;
+    border-top: 2px solid rgb(97, 64, 64);
     width:100%;
     height: 300px;
     
 }
 
 .dash_explain2{
-    margin-top: 50px;
+    
+    margin-top: 1%;
     width: 100%;
     height:200px;
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.20), 0 3px 6px rgba(0,0,0,0.23);
+    border: 5px solid rgb(97, 64, 64);
+    border-radius: 8px;
 }
 
 /* 유닛 컨트롤 */
@@ -66,17 +92,19 @@
 
 /* 제목 + 박스 */
 .dash_unit-box{
-    width: 200px;
+    margin-top: -15%;
+    width: 95%;
     height: 60px;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 20px;
     padding-left: 10px;
-    
+    margin-right: 10px;
     display: flex;
     flex-direction: row;
     background-color: white;
-    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    border: 5px solid rgb(97, 64, 64);
+    border-radius: 8px;
 }
 
 .dash_inner-title{

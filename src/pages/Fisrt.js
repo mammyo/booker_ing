@@ -13,13 +13,15 @@ const First = ({ match }) => {
 
     const test = match.params.uname;
     console.log(test);
+    console.log(match.params.uname);
+    console.log(match.params.unumber);
     return (
 
         <center>
 
-            <Head uname={match.params.uname}/>
-            <Body uname={match.params.uname}/>
-            <Foot uname={match.params.uname}/>
+            <Head uname={match.params.uname} unumber={match.params.unumber} />
+            <Body uname={match.params.uname} unumber={match.params.unumber}/>
+            <Foot uname={match.params.uname} unumber={match.params.unumber}/>
         </center>
 
     );

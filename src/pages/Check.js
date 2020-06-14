@@ -102,6 +102,8 @@ class Check extends Component {
 
       
       return (
+          <div className='check-box'>
+            <div className='check-title'>예약자 확인</div>
         
             <>
 
@@ -118,7 +120,7 @@ class Check extends Component {
               </BookerTemplate>
 
               <Bookstat id={this.id2} /></>          
-        
+          </div>  
       );
     }
   }

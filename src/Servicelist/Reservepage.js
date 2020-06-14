@@ -8,11 +8,13 @@ import MenuPrice from './menuPrice';
 import ImageSwitch from './imageToggle';
 import CommentSwitch from './commentToggle';
 import CouponToggle from './couponToggle';
+import SeatToggle from './SeatToggle';
+import PlaceToggle from './PlaceToggle';
 class Reservepage extends Component {
-    state={
-        
-        setcoupon:'X',
-    
+    state = {
+
+        setcoupon: 'X',
+
     }
 
     minclick = () => {
@@ -21,9 +23,9 @@ class Reservepage extends Component {
 
 
 
-    onsetcoupon=(text)=>{
+    onsetcoupon = (text) => {
         this.setState({
-            setcoupon: (text==false) ? "O" : "X",
+            setcoupon: (text == false) ? "O" : "X",
         })
     }
 
@@ -31,14 +33,33 @@ class Reservepage extends Component {
     render() {
         console.log(this.state);
         return (
-            <div className='homepage_box'>
-                
-                <div>
-                    <CouponToggle onClick={this.onsetcoupon}/>
+            <div className='hompi_box'>
+                <div className='hompi_title'>
+                    예약페이지 설정
+                </div>
+    
+                <div className='homepage_box'>
+                    <div>
+                        <CouponToggle onClick={this.onsetcoupon} /><br></br>
+                    </div>
+                    
+
+                    <div>
+                        <SeatToggle onClick={this.onsetcoupon} /><br></br>
+                    </div>
+                    
+
+                    <div>
+                        <CouponToggle onClick={this.onsetcoupon} /> <br></br>
+                    </div>
+
+                    <div>
+                        <PlaceToggle onClick={this.onsetcoupon} /> <br></br>
+                    </div>
+                    <button className='homepage_button' onClick={this.minclick}>완료</button>
                 </div>
 
-                <button className='homepage_button' onClick={this.minclick}>완료</button>
-
+                
             </div>
         );
     }

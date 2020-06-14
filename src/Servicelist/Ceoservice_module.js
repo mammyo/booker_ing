@@ -20,31 +20,28 @@ class Ceoservice_module extends Component {
 
     render() {
         return (
-           
-                <div className='module_box'>
+            <div className='mou_box'>
+                <div className='mou_title'>
+                    서비스 등록
+                </div>
 
+                <div className='module_box'>
                     <div>
                         <MenuName />
                     </div>
-
                     <div>
                         <MenuPrice />
                     </div>
-
                     <div>
                         <ImageSwitch />
                     </div>
-
                     <div>
                         <CommentSwitch />
                     </div>
-
-
                     <button id='finish' onClick={this.minclick}>완료</button>
-
-
                 </div>
-           
+            </div>
+
 
         );
     }

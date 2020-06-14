@@ -1,17 +1,18 @@
 
-.check-container{
-    width: 500px;
-    margin-top : 10%; 
-    margin-bottom : 10%;
-    margin-left: 10%;
-    padding : 5%;
-    height: 500px;
-    overflow: auto;
-    border-radius: 50px;
-    background-color: white;
-    background-color: rgba( 255, 255, 255, 0.2 );
-    border-right: 1px solid black;
-    display: inline-block;
+.check-box{
+    position:relative;
+    margin:auto;
+    width: 90%;
+    height: 80%;
+    
     
 
+}
+
+.check-title{
+    text-align: left;
+    margin-left: 2%;
+    margin-bottom: 0;
+    font-size: 30px;
+    font-weight: bold;
 }

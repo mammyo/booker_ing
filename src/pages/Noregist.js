@@ -9,8 +9,8 @@ import Ceo_regist from './Ceo_regist';
 
 
 
-function Fruit({ name }) {
-    return <button><Link exact to={`/${name}`}>{name}</Link></button>
+function Fruit({ name,number }) {
+return <button><Link exact to={`/${name}/${number}`}>{name} {number}</Link></button>
 }
 
 
@@ -28,11 +28,11 @@ class Noregist extends Component {
     }
 
     callApi = () => {
-        fetch('http://59.29.224.90:8080/jpa/ceo')
+        fetch('http://192.168.43.136:8080/jpa/ceo')
             .then(response => response.json())
             .then(data => 
                 this.setState({
-                    Ceolist :data.map(num =>{return num.busname}),
+                    Ceolist :data.map(num =>{return [num.busname,num.busnumber]}),
                 })
                 
                 /*
@@ -46,6 +46,7 @@ class Noregist extends Component {
                 
             )
             .catch(error => console.log(error))
+           
 
     }
 
@@ -67,7 +68,7 @@ class Noregist extends Component {
                 <div class="content">
                     <h6>등록한 사업지를 선택해주세요</h6>
                     <div className='choose'>
-                        {this.state.Ceolist.map(element => <Fruit name={element} />)}
+                        {this.state.Ceolist.map(element => <Fruit name={element[0]} number={element[1]} />)}
                         <button style={{ width: "100px" }} onClick={this.busregist}> + </button>
                         {/* <Ceo_regist onCreate={this.handleCreate}/> */}
                     </div>

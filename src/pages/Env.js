@@ -21,25 +21,25 @@ class Env extends Component {
             <div className='service_body'>
                 <div className='service_body1'>
 
-                    <Link exact to={`/${this.props.subname}/env/service`}><button>서비스</button></Link>
+                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/env/service`}><button>서비스</button></Link>
 
-                    <Link exact to={`/${this.props.subname}/env/homepage`}><button>홈페이지</button></Link>
-                    <Link exact to={`/${this.props.subname}/env/reservepage`}><button>예약페이지</button></Link>
-                    <Link exact to={`/${this.props.subname}/env/template`}><button>템플릿 보기</button></Link>
+                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/env/homepage`}><button>홈페이지</button></Link>
+                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/env/reservepage`}><button>예약페이지</button></Link>
+                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/env/template`}><button>템플릿 보기</button></Link>
                     
                 </div>
 
                 <div className='service_body2'>
                     <Switch>
-                        <Route path={`/${this.props.subname}/env/service`} component={Ceoservice} />
-                        <Route exact path={`/${this.props.subname}/env/homepage`} component={Ceohomepage} />
-                        <Route exact path={`/${this.props.subname}/env/reservepage`} component={Reservepage} />
-                        <Route exact path={`/${this.props.subname}/env/template`} component={Template} />
+                        <Route path={`/${this.props.subname}/${this.props.subnumber}/env/service`} component={Ceoservice} />
+                        <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/homepage`} component={Ceohomepage} />
+                        <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/reservepage`} component={Reservepage} />
+                        <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/template`} component={Template} />
                         {/* <Route exact path="/list" component={Check} /> */}
                     </Switch>
 
 
-                    <Route exact path={`/${this.props.subname}/env/prepare`} component={Prepare} />
+                    <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/prepare`} component={Prepare} />
 
 
                 </div>
