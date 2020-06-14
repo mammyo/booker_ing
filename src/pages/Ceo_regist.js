@@ -116,7 +116,19 @@ class Ceo_regist extends Component {
                             <button value="헬스장" onClick={this.optionchange}>헬스장</button>
 
                             <input type="radio" value="PC방" checked={this.state.category === 'PC방'} onChange={this.optionchange} />
-                            <button value="PC방" onClick={this.optionchange}>PC방</button>
+                            <button value="PC방" onClick={this.optionchange}>PC방</button><br></br>
+
+                            <input type="radio" value="필라테스" checked={this.state.category === '필라테스'} onChange={this.optionchange} />
+                            <button value="필라테스" onClick={this.optionchange}>필라테스</button>
+
+                            <input type="radio" value="볼링장" checked={this.state.category === '볼링장'} onChange={this.optionchange} />
+                            <button value="볼링장" onClick={this.optionchange}>볼링장</button>
+
+                            <input type="radio" value="렌트카" checked={this.state.category === '렌트카'} onChange={this.optionchange} />
+                            <button value="렌트카" onClick={this.optionchange}>렌트카</button>
+
+                            <input type="radio" value="수영장" checked={this.state.category === '수영장'} onChange={this.optionchange} />
+                            <button value="수영장" onClick={this.optionchange}>수영장</button>
                         </div>
 
                         <div className="login_id">
