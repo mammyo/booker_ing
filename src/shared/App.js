@@ -31,7 +31,7 @@ class App extends Component {
                 <Switch>
                     <Route path="/address" component={Postcode} />
                     <Route path="/Ceo_regist" component={Ceo_regist} />
-                    <Route path="/Ceoservice_module" component={Ceoservice_module} />
+                    <Route path="/Ceoservice_module/:storenumber" component={Ceoservice_module} />
                     <Route path="/Template_module/:title" component={Template_module} />
                     <Route path="/:uname/:unumber" component={Fisrt} />
                     <Route path="/" component={Noregist} />

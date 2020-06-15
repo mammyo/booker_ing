@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Spring.css';
-class Spring extends Component {
+import './Fall.css';
+class Fall extends Component {
 
 
 
@@ -34,10 +34,10 @@ class Spring extends Component {
 
                             <section>
                                 
-                                <div class="parallax-one-store2-spring">
+                                <div class="parallax-one-store2-fall">
                                 
                                 <div className="top_text_margin">
-                                    <h2>    Spring</h2>
+                                    <h2>Fall</h2>
                                 
                                 </div>
                                 <button className =" store2_reg_btn">RESERVATION</button>
@@ -68,7 +68,7 @@ class Spring extends Component {
                             </div> */}
                             </section>
                             <section>
-                            <div class="parallax2-two-spring">
+                            <div class="parallax2-two-fall">
                                 
                                 <div>
                                     <h2 className="left">INFO</h2>
@@ -107,7 +107,7 @@ class Spring extends Component {
                             </section>
 
                             <section>
-                            <div class="parallax2-three-spring">
+                            <div class="parallax2-three-fall">
                             <div>
                                     <h2 className="left1">SERVICE</h2>
                                 </div>
@@ -157,4 +157,4 @@ class Spring extends Component {
     }
 }
 
-export default Spring;
+export default Fall;

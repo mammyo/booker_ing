@@ -139,7 +139,7 @@ class Ceohomepage extends Component {
                         </div>
                     </div>
 
-                    <form onSubmit={this.handleFormSubmit}>
+                    {/* <form onSubmit={this.handleFormSubmit}>
 
                         <br /><br />
                         이미지<br /><TextField label="이미지" type="file" name="file" file={this.state.file} value={this.state.fileName} onChange={this.handleFileChange} />
@@ -149,12 +149,12 @@ class Ceohomepage extends Component {
                         content<br /><TextField label="contents" type="text" name="contents" value={this.state.contents} onChange={this.handleValueChange} />
                         <br /><br />
                         <Button variant="contained" color="primary" type="submit">추가하기</Button>
-                    </form>
+                    </form> */}
 
 
                     <div>
                         <div className="switch-container">
-                            <h3>업종 설명</h3>
+                            <h3>업체 설명</h3>
 
                             <Comment />
 

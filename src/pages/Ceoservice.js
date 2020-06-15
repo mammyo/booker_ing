@@ -62,17 +62,47 @@ const temp = [
 
 class Ceoservice extends Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
+        this.state = {
+            Servicelist: [],
+        }
+    
     }
-    state = {
-        name: ''
-    }
-
+    
 
     busregist = () => {
-        window.open('http://localhost:3000/Ceoservice_module', 'ot', 'width=800, height=700, status=no,resizable=no');
+        window.open(`http://localhost:3000/Ceoservice_module/${this.props.businessnumber}`, 'ot', 'width=800, height=700, status=no,resizable=no');
     }
+
+    componentDidMount() {
+        this.callApi();
+
+    }
+
+    callApi = () => {
+        fetch('http://59.29.224.191:8080/api/store_list')
+            .then(response => response.json())
+            .then(data => 
+                this.setState({
+                    Servicelist :data.map(num =>{return [num.serivceimg,num.servicename,num.servicerpice,num.serviceexplain]}),
+                })
+                
+                /*
+                console.log(data);
+                var ceolist=[];
+                ceolist = data.map(num =>{return num.busname})
+                this.setState({
+                    Ceolist :data.map(num =>{return num.busname}),
+                })
+                */
+                
+            )
+            .catch(error => console.log(error))
+           
+
+    }
+
 
 
 

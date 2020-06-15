@@ -13,6 +13,10 @@ import './Template.css';
 
 function Tempate_function({ name }) {
 
+    function viewtem2() {
+        window.open(`http://localhost:3000/Template_module/${name.name}`, 'template', 'width=1400, height=700, status=no,resizable=no');
+    }
+    
     return  <button className='template_box_menu' onClick={viewtem2} >
                 <div className='template_img'>
                     <img src={name.image} width="100%" height="100%"></img>
@@ -23,9 +27,6 @@ function Tempate_function({ name }) {
             </button>
 }
 
-function viewtem2(){
-    window.open(`http://localhost:3000/Template_modul/spring`, 'template', 'width=800, height=700, status=no,resizable=no');
-}
 
 
 const temp = [

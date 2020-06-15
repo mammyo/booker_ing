@@ -15,8 +15,9 @@ class Comment extends Component {
 
   handleClick = () =>{
     console.log(this.state);
-    this.setState({name: ' '});
     
+    this.props.comment(this.state.name);
+    this.setState({name: ' '});
 };
 
 

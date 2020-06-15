@@ -14,6 +14,7 @@ class MenuPrice extends Component {
 
   handleClick = () =>{
     console.log(this.state);
+    this.props.price(this.state.price)
     this.setState({price: ' '});
     
 };

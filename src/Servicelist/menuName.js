@@ -9,10 +9,12 @@ class MenuName extends Component {
     this.setState({
       name: e.target.value
     })
+    console.log(this.state.name);
   }
 
 
   handleClick = () =>{
+    this.props.name(this.state.name)
     console.log(this.state);
     this.setState({name: ' '});
     

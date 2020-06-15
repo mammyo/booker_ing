@@ -49,9 +49,7 @@ class Reservepage extends Component {
                     </div>
                     
 
-                    <div>
-                        <CouponToggle onClick={this.onsetcoupon} /> <br></br>
-                    </div>
+                    
 
                     <div>
                         <PlaceToggle onClick={this.onsetcoupon} /> <br></br>
