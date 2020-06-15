@@ -12,6 +12,7 @@ import Env from '../pages/Env';
 import './App.css';
 import Ceoservice_module from '../Servicelist/Ceoservice_module';
 import Postcode from '../Servicelist/kakaoAddress';
+import Template_module from '../pages/Template_module';
 
 const a = 1;
 
@@ -31,6 +32,7 @@ class App extends Component {
                     <Route path="/address" component={Postcode} />
                     <Route path="/Ceo_regist" component={Ceo_regist} />
                     <Route path="/Ceoservice_module" component={Ceoservice_module} />
+                    <Route path="/Template_module/:title" component={Template_module} />
                     <Route path="/:uname/:unumber" component={Fisrt} />
                     <Route path="/" component={Noregist} />
                     

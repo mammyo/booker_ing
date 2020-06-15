@@ -19,42 +19,42 @@ import pride_image from '../images/튀김.jpg';
 function Fruit({ name }) {
 
     return <div className='service_box_menu'>
-                <div className='menu_img'>
-                    <img src={name.image} width="100%" height="100%"></img>
-                </div>
-                <div className='menu_name'>{name.name}</div>
-                <div className='menu_price'>{name.price}</div>
-                <div className='menu_explain'>{name.explain}</div>
-            </div>
+        <div className='menu_img'>
+            <img src={name.image} width="100%" height="100%"></img>
+        </div>
+        <div className='menu_name'>{name.name}</div>
+        <div className='menu_price'>{name.price}</div>
+        <div className='menu_explain'>{name.explain}</div>
+    </div>
 }
 
 
 const temp = [
     {
-    image:dduck_image,
-    name: '떡볶이',
-    price: '3000원',
-    explain: '매움'
-},
-{
-    image:pride_image,
-    name: '튀김',
-    price: '2000원',
-    explain: '깔끔한 튀김옷',
-},
-{
-    image:ramyun_image,
-    name: '라면',
-    price: '3000원',
-    explain: '집 보다 맛있음',
-},
+        image: dduck_image,
+        name: '떡볶이',
+        price: '3000원',
+        explain: '매움'
+    },
+    {
+        image: pride_image,
+        name: '튀김',
+        price: '2000원',
+        explain: '깔끔한 튀김옷',
+    },
+    {
+        image: ramyun_image,
+        name: '라면',
+        price: '3000원',
+        explain: '집 보다 맛있음',
+    },
 
-{
-    image:kimbab_image,
-    name: '김밥',
-    price: '3000원',
-    explain: '밥알보다 재료가 많음',
-},
+    {
+        image: kimbab_image,
+        name: '김밥',
+        price: '3000원',
+        explain: '밥알보다 재료가 많음',
+    },
 ]
 
 
@@ -78,15 +78,18 @@ class Ceoservice extends Component {
 
     render() {
         return (
-            
-            <div className="service">
-                <div classname="service_title">
-                    서비스를 등록해주세요
-                <button  onClick={this.busregist}> + </button>
-                </div>
+            <div className="ser_box">
 
-                <div className='service_box'>
-                    {temp.map(element => <Fruit name={element} />)}
+
+                <div className="ser_title">
+                    서비스 등록
+                    <button onClick={this.busregist}> + </button>
+                </div>
+                <div className="service">
+
+                    <div className='service_box'>
+                        {temp.map(element => <Fruit name={element} />)}
+                    </div>
                 </div>
             </div>
 

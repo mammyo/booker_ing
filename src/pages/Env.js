@@ -32,12 +32,12 @@ class Env extends Component {
                 <div className='service_body2'>
                     <Switch>
                         <Route path={`/${this.props.subname}/${this.props.subnumber}/env/service`} component={Ceoservice} />
-                        <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/homepage`} component={Ceohomepage} />
+                        <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/homepage`} render={() => <Ceohomepage businessnumber={this.props.subnumber}/>}/>
                         <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/reservepage`} component={Reservepage} />
                         <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/template`} component={Template} />
                         {/* <Route exact path="/list" component={Check} /> */}
                     </Switch>
-
+                    {/* render={() => <Ceohomepage businessnumber={this.props.subnumber}/>}/> */}
 
                     <Route exact path={`/${this.props.subname}/${this.props.subnumber}/env/prepare`} component={Prepare} />
 

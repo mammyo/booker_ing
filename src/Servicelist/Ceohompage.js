@@ -63,7 +63,7 @@ class Ceohomepage extends Component {
     }
 
     addCustomer = () => {
-        const url = 'http://59.29.224.191:8080/api/store_list';
+        const url = `http://59.29.224.191:8080/api/store_list`;
         const formData = new FormData();
         formData.append('file', this.state.file);
         formData.append('title', this.state.title);
@@ -118,6 +118,7 @@ class Ceohomepage extends Component {
 
 
     render() {
+        console.log(this.props.businessnumber);
 
         return (
             <div className='hompi_box'>
@@ -138,7 +139,7 @@ class Ceohomepage extends Component {
                         </div>
                     </div>
 
-                    {/* <form onSubmit={this.handleFormSubmit}>
+                    <form onSubmit={this.handleFormSubmit}>
 
                         <br /><br />
                         이미지<br /><TextField label="이미지" type="file" name="file" file={this.state.file} value={this.state.fileName} onChange={this.handleFileChange} />
@@ -148,7 +149,7 @@ class Ceohomepage extends Component {
                         content<br /><TextField label="contents" type="text" name="contents" value={this.state.contents} onChange={this.handleValueChange} />
                         <br /><br />
                         <Button variant="contained" color="primary" type="submit">추가하기</Button>
-                    </form> */}
+                    </form>
 
 
                     <div>

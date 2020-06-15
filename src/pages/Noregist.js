@@ -28,11 +28,11 @@ class Noregist extends Component {
     }
 
     callApi = () => {
-        fetch('http://192.168.43.136:8080/jpa/ceo')
+        fetch('http://59.29.224.191:8080/api/store_list')
             .then(response => response.json())
             .then(data => 
                 this.setState({
-                    Ceolist :data.map(num =>{return [num.busname,num.busnumber]}),
+                    Ceolist :data.map(num =>{return [num.store_name,num.storeNumber]}),
                 })
                 
                 /*

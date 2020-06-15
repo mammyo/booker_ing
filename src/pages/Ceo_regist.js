@@ -57,11 +57,11 @@ class Ceo_regist extends Component {
     }
 
     addCustomer = () => {
-        const url = 'http://192.168.43.136:8080/jpa/ceo';
+        const url = 'http://59.29.224.191:8080/api/store_list';
         const data = {
-            busname: this.state.busName,
-            busaddress: this.state.busAddress,
-            busnumber: this.state.busNo,
+            store_name: this.state.busName,
+            store_address: this.state.busAddress,
+            storeNumber: this.state.busNo,
             category: this.state.category,
 
         };

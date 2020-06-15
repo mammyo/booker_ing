@@ -53,20 +53,12 @@ const temp = [
 ]
 
 
-class Template extends Component {
-
-    constructor() {
-        super();
-    }
-
-    state = {
-        name: ''
-    }
-
+const Template_module = ({ match }) => {
+    
 
     
 
-    render() {
+        console.log(match.param.title);
         return (
             <div className="tem_box">
 
@@ -81,7 +73,7 @@ class Template extends Component {
             </div>
 
         )
-    }
+    
 };
 
-export default Template;
+export default Template_module;
