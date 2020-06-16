@@ -16,7 +16,7 @@ constructor(props){
   render() {
     return (
       <div className="header">
-        <div className="logo"><Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}/dash/dash`}>Booker-Ceo</Link></div>
+        <div className="logo"><Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}`}>Booker-Ceo</Link></div>
 
         <div className="menu">
           <Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}`} >홈</Link>
