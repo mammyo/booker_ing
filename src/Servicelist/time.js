@@ -1,5 +1,6 @@
 import React,{Component} from 'react';
 import TimePicker from 'react-time-picker';
+import './Ceohompage.css';
 
 // npm i react-time-picker
 class Time extends Component {
@@ -15,7 +16,9 @@ class Time extends Component {
     } ;
 
 handleClick = () =>{
+
     console.log(this.state);
+    this.props.time(this.state.time);
     
 };
 
@@ -23,12 +26,11 @@ handleClick = () =>{
   render() {
     return (
       <div>
-                <h3>-오픈 시간</h3>
         <TimePicker
           onChange={this.onChange}
           value={this.state.time}
         />
-        <button onClick={this.handleClick} >click</button>
+        <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
   
       </div>
       

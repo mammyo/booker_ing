@@ -12,7 +12,7 @@ import ImageUpload2 from './ImageUpload2.js';
 import ImageUpload3 from './ImageUpload3.js';
 import ImageUpload4 from './ImageUpload4.js';
 import ImageUpload from './ImageUpload.js';
-import Comment from './comment.js';
+import Comment2 from './comment2.js';
 import TimePicker from 'react-time-picker';
 import { post } from 'axios';
 import { TextField, Button } from "@material-ui/core"
@@ -20,69 +20,59 @@ class Ceohomepage extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            file: null,
-            title: '',
-            contents: '',
-            fileName: '',
+          
+            coment: '',
             img1: '',
             img2: '',
             img3: '',
-            img4: ''
+            img4: '',
+            open:'',
+            close:'',
+
         }
     }
 
-    // state={}
-    handleFormSubmit = (e) => {
-        e.preventDefault()
-        this.addCustomer(this.state.file)
-            .then((response) => {
-                console.log(response.data);
-            })
-        this.setState({
-            file: null,
-            title: '',
-            contents: '',
-            fileName: ''
-
-        })
-    }
-
-    handleFileChange = (e) => {
-        this.setState({
-            file: e.target.files[0],
-            fileName: e.target.value
-        })
-
-    }
-
-    handleValueChange = (e) => {
-        let nextState = {};
-        nextState[e.target.name] = e.target.value;
-        this.setState(nextState);
-
-    }
-
-    addCustomer = () => {
-        const url = `http://59.29.224.191:8080/api/store_list`;
-        const formData = new FormData();
-        formData.append('file', this.state.file);
-        formData.append('title', this.state.title);
-        formData.append('contents', this.state.contents);
-
-        const header = {
-            'Content-Type': 'multipart/form-data'
-        };
-        console.log(this.state.file);
-        console.log(this.state.title);
-        console.log(this.state.contents);
-        console.log(formData);
-        return post(url, formData, header);
-    }
+   
+    
 
 
 
     minclick = () => {
-        alert("완료되었습니다.")
+        this.addCustomer()
+            .then((response) => {
+                console.log(response.data);
+            })
+        this.setState({
+            coment: '',
+            img1: '',
+            img2: '',
+            img3: '',
+            img4: '',
+            open:'',
+            close:'',
+
+        })
+    
+    }
+
+
+    addCustomer = () => {
+        const url = `http://http://59.29.224.191:8080/api/store_list/${this.props.businessnumber}`;
+        const data = {
+            
+            storeImage1: this.state.img1,
+            storeImage2: this.state.img2,
+            storeImage3: this.state.img3,
+            storeImage4: this.state.img4,
+            store_open_time: this.state.open,
+            tore_end_time: this.state.close,
+            tore_explanation: this.state.comment,
+
+        };
+        const header = {
+            'Content-Type': 'application/json'
+        };
+        return post(url, data, header);
     }
 
 
@@ -114,11 +104,32 @@ class Ceohomepage extends Component {
     };
 
 
+    uploadopen = (text)=>{
+        this.setState({
+            open: text,
+        })
+    }
+
+    uploadclose = (text)=>{
+        this.setState({
+            close: text,
+        })
+    }
+
+
+    uploadcomment =(text)=>{
+        this.setState({
+            comment: text,
+        })
+    }
+
+
 
 
 
     render() {
         console.log(this.props.businessnumber);
+        console.log(this.state);
 
         return (
             <div className='hompi_box'>
@@ -138,25 +149,11 @@ class Ceohomepage extends Component {
                             <ImageUpload4 pic4={this.uploadpic4} />
                         </div>
                     </div>
-
-                    {/* <form onSubmit={this.handleFormSubmit}>
-
-                        <br /><br />
-                        이미지<br /><TextField label="이미지" type="file" name="file" file={this.state.file} value={this.state.fileName} onChange={this.handleFileChange} />
-                        <br /><br />
-                        title<br /><TextField label="title" type="text" name="title" value={this.state.title} onChange={this.handleValueChange} /><Button variant="contained" color="primary" onClick={this.handleCheckId}>중복확인</Button>
-                        <br /><br />
-                        content<br /><TextField label="contents" type="text" name="contents" value={this.state.contents} onChange={this.handleValueChange} />
-                        <br /><br />
-                        <Button variant="contained" color="primary" type="submit">추가하기</Button>
-                    </form> */}
-
-
                     <div>
                         <div className="switch-container">
                             <h3>업체 설명</h3>
 
-                            <Comment />
+                            <Comment2 comment={this.uploadcomment}/>
 
                         </div>
                     </div>
@@ -164,23 +161,14 @@ class Ceohomepage extends Component {
                     <div>
                         <div>
                             <h3>-오픈 시간</h3>
-                            <TimePicker
-                                onChange={this.onChange}
-                                value={this.state.time}
-                            />
-                            <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
-
+                            <Time time={this.uploadopen}/>
                         </div>
                     </div>
 
                     <div>
                         <div>
                             <h3>-마감 시간</h3>
-                            <TimePicker
-                                onChange={this.onChange}
-                                value={this.state.time}
-                            />
-                            <button className='homepage_click_bt' onClick={this.handleClick} >click</button>
+                            <Time2 time={this.uploadclose}/>
 
                         </div>
                     </div>
