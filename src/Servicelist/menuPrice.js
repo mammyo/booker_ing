@@ -24,7 +24,7 @@ class MenuPrice extends Component {
   render() {
     return (
   <div>
-      <h3>-가격</h3>
+      <h3>- 가격</h3>
         <input
           placeholder="가격"
           value={this.state.price}

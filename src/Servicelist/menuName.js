@@ -23,7 +23,7 @@ class MenuName extends Component {
   render() {
     return (
   <div>
-          <h3>-이름</h3>
+          <h3>- 이름</h3>
         <input
           placeholder="이름"
           value={this.state.name}

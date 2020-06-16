@@ -41,6 +41,7 @@ class Menuimageup extends React.Component {
   
       return (
         <div className="previewComponent">
+          <h3>- 이미지</h3>
           <form onSubmit={(e)=>this._handleSubmit(e)}>
             <input className="fileInput" 
               type="file" 
