@@ -27,8 +27,8 @@ class Body extends Component {
             <div id='body'>
                 
                     <Switch>
-                        <Route path={`/${this.props.uname}/${this.props.unumber}/env`} render={() => <Env subname={this.props.uname} subnumber={this.props.unumber}/>}/>
-                        <Route path={`/${this.props.uname}/${this.props.unumber}`} render={() => <Home subname={this.props.uname} subnumber={this.props.unumber} />}/>
+                        <Route path={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}/env`} render={() => <Env subid={this.props.uid} subname={this.props.uname} subnumber={this.props.unumber}/>}/>
+                        <Route path={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}`} render={() => <Home subid={this.props.uid} subname={this.props.uname} subnumber={this.props.unumber} />}/>
 
                         <Route component={NotFound} />
                     </Switch>

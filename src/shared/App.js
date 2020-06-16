@@ -33,8 +33,8 @@ class App extends Component {
                     <Route path="/Ceo_regist" component={Ceo_regist} />
                     <Route path="/Ceoservice_module/:storenumber" component={Ceoservice_module} />
                     <Route path="/Template_module/:title" component={Template_module} />
-                    <Route path="/:uname/:unumber" component={Fisrt} />
-                    <Route path="/" component={Noregist} />
+                    <Route path="/:uid/:uname/:unumber" component={Fisrt} />
+                    <Route path="/:uid" component={Noregist} />
                     
                 </Switch>
             );

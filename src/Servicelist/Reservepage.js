@@ -10,22 +10,60 @@ import CommentSwitch from './commentToggle';
 import CouponToggle from './couponToggle';
 import SeatToggle from './SeatToggle';
 import PlaceToggle from './PlaceToggle';
+import { post } from 'axios';
 class Reservepage extends Component {
     state = {
 
-        setcoupon: 'X',
+        setcoupon: '0',
+        setseat: '0',
+        setplace: '0',
 
     }
 
     minclick = () => {
-        alert("완료되었습니다.")
+        this.addCustomer()
+            .then((response) => {
+                console.log(response.data);
+            })
+        
+
+        alert("전송완료 했습니다.")
+    
     }
 
+
+    addCustomer = () => {
+        const url = `http://http://59.29.224.191:8080/api/store_list/${this.props.businessnumber}`;
+        const data = {
+            storeNumber: this.props.businessnumber,
+            coupon: this.state.setcoupon,
+            seat: this.state.setseat,
+            place: this.state.setplace,
+            
+
+        };
+        const header = {
+            'Content-Type': 'application/json'
+        };
+        return post(url, data, header);
+    }
 
 
     onsetcoupon = (text) => {
         this.setState({
-            setcoupon: (text == false) ? "O" : "X",
+            setcoupon: (text == false) ? "1" : "0",
+        })
+    }
+
+    onsetseat = (text) => {
+        this.setState({
+            setcoupon: (text == false) ? "1" : "0",
+        })
+    }
+
+    onsetpace = (text) => {
+        this.setState({
+            setcoupon: (text == false) ? "1" : "0",
         })
     }
 
@@ -45,14 +83,14 @@ class Reservepage extends Component {
                     
 
                     <div>
-                        <SeatToggle onClick={this.onsetcoupon} /><br></br>
+                        <SeatToggle onClick={this.onsetseat} /><br></br>
                     </div>
                     
 
                     
 
                     <div>
-                        <PlaceToggle onClick={this.onsetcoupon} /> <br></br>
+                        <PlaceToggle onClick={this.onsetpace} /> <br></br>
                     </div>
                     <button className='homepage_button' onClick={this.minclick}>완료</button>
                 </div>

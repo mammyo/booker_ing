@@ -16,11 +16,11 @@ constructor(props){
   render() {
     return (
       <div className="header">
-        <div className="logo"><Link exact to={`/${this.props.uname}/${this.props.unumber}/dash/dash`}>Booker-Ceo</Link></div>
+        <div className="logo"><Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}/dash/dash`}>Booker-Ceo</Link></div>
 
         <div className="menu">
-          <Link exact to={`/${this.props.uname}/${this.props.unumber}`} >홈</Link>
-          <Link exact to={`/${this.props.uname}/${this.props.unumber}/env/service`} >설정</Link>
+          <Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}`} >홈</Link>
+          <Link exact to={`/${this.props.uid}/${this.props.uname}/${this.props.unumber}/env/service`} >설정</Link>
         </div>
         
         <div className='empty2'>

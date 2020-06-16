@@ -27,20 +27,20 @@ class Home extends Component {
         return (
             <div className='home_body'>
                 <div className='home_body1'>
-                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/dash/dash`}><button>대쉬보드</button></Link>
-                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/dash/list`}><button>예약자리스트</button></Link>
-                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/dash/guide`}><button>등록가이드</button></Link>
-                    <Link exact to={`/${this.props.subname}/${this.props.subnumber}/dash/center`}><button>고객센터</button></Link>
+                    <Link exact to={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/dash`}><button>대쉬보드</button></Link>
+                    <Link exact to={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/list`}><button>예약자리스트</button></Link>
+                    <Link exact to={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/guide`}><button>등록가이드</button></Link>
+                    <Link exact to={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/center`}><button>고객센터</button></Link>
 
                 </div>
 
                 <div className='home_body2'>
                     <Switch>
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/dash`} render={() => <Dashboard businessnumber={this.props.subnumber}/>}/>
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/list`} render={() => <Check2 businessnumber={this.props.subnumber}/>}/>
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/guide`} component={Guide} />
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/center`} component={Center} />
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}`} component={Notice} />
+                        <Route path={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/dash`} render={() => <Dashboard businessnumber={this.props.subnumber}/>}/>
+                        <Route path={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/list`} render={() => <Check2 businessnumber={this.props.subnumber}/>}/>
+                        <Route path={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/guide`} component={Guide} />
+                        <Route path={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}/dash/center`} component={Center} />
+                        <Route path={`/${this.props.subid}/${this.props.subname}/${this.props.subnumber}`} component={Notice} />
                     </Switch>
                 </div>
                 
