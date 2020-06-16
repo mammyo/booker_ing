@@ -10,6 +10,7 @@ class Comment extends Component {
     this.setState({
       name: e.target.value
     })
+
   }
 
 
@@ -17,7 +18,7 @@ class Comment extends Component {
     console.log(this.state);
     
     this.props.comment(this.state.name);
-    this.setState({name: ' '});
+    
 };
 
 

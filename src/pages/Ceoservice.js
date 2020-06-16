@@ -28,6 +28,18 @@ function Fruit({ name }) {
     </div>
 }
 
+function Fruit2({ name }) {
+    console.log(name);
+    return <div className='service_box_menu'>
+        <div className='menu_img'>
+            <img src={name.image} width="100%" height="100%"></img>
+        </div>
+        <div className='menu_name'>{name[1]}</div>
+        <div className='menu_price'>{name[2]}</div>
+        <div className='menu_explain'>{name[3]}</div>
+    </div>
+}
+
 
 const temp = [
     {
@@ -81,11 +93,12 @@ class Ceoservice extends Component {
     }
 
     callApi = () => {
-        fetch('http://59.29.224.191:8080/api/store_list')
+        fetch(`http://59.29.224.191:8080/api/best_menu/${this.props.businessnumber}`)
             .then(response => response.json())
+            
             .then(data => 
                 this.setState({
-                    Servicelist :data.map(num =>{return [num.serivceimg,num.servicename,num.servicerpice,num.serviceexplain]}),
+                    Servicelist :data.map(num =>{return [num.serivceImage,num.serviceName,num.servicePrice,num.serviceExplanation]}),
                 })
                 
                 /*
@@ -107,6 +120,7 @@ class Ceoservice extends Component {
 
 
     render() {
+        console.log(this.state.Servicelist);
         return (
             <div className="ser_box">
 
@@ -119,6 +133,7 @@ class Ceoservice extends Component {
 
                     <div className='service_box'>
                         {temp.map(element => <Fruit name={element} />)}
+                        {this.state.Servicelist.map(element => <Fruit2 name={element} />)}
                     </div>
                 </div>
             </div>

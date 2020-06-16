@@ -36,7 +36,7 @@ class Home extends Component {
                 <div className='home_body2'>
                     <Switch>
                         <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/dash`} render={() => <Dashboard businessnumber={this.props.subnumber}/>}/>
-                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/list`} component={Check} />
+                        <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/list`} render={() => <Check businessnumber={this.props.subnumber}/>}/>
                         <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/guide`} component={Guide} />
                         <Route path={`/${this.props.subname}/${this.props.subnumber}/dash/center`} component={Center} />
                         <Route path={`/${this.props.subname}/${this.props.subnumber}`} component={Notice} />

@@ -13,42 +13,44 @@ import Comment from './comment.js';
 import { post } from 'axios';
 
 
+
+
 class Ceoservice_module extends Component {
 
-    
     state={
         menuname:'',
         menuprice:'',
         menuimg:'',
         comment:'',
     }
-
-
     minclick = () => {
         this.addCustomer()
             .then((response) => {
                 console.log(response.data);
             })
         this.setState({
-            category: '',
-            busName: '',
-            busAddress: '',
-            busNo: '',
+            menuname:'',
+            menuprice:'',
+            menuimg:'',
+            comment:'',
 
         })
         alert("서비스 등록 \n완료되었습니다.")
-        window.close();
+        window.opener.location.href = `${window.opener.location.href}`;
+        window.close()
+        
 
     }
 
 
     addCustomer = () => {
-        const url = 'http://59.29.224.191:8080/api/best_menu';
+        const url = `http://59.29.224.191:8080/api/best_menu`;
         const data = {
+            storeNumber:this.props.match.params.storenumber,
             serviceName: this.state.menuname,
             servicePrice: this.state.menuprice,
-            storeNumber: this.state.menuimg,
-            serviceComment: this.state.comment,
+            erviceImage: this.state.menuimg,
+            serviceExplanation: this.state.comment,
 
         };
         const header = {
@@ -79,7 +81,7 @@ class Ceoservice_module extends Component {
 
     uploadmenucomment =(text)=>{
         this.setState({
-            menucomment: text,
+            comment: text,
         })
     }
 
@@ -90,7 +92,10 @@ class Ceoservice_module extends Component {
 
     render() {
         console.log(this.state);
-     
+        const { params } = this.props.match;
+        console.log(this.props.match.params.storenumber);
+        console.log(window.opener.location);
+        
         return (
             <div className='mou_box'>
                 <div className='mou_title'>

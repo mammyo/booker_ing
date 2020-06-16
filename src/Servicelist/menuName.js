@@ -16,8 +16,7 @@ class MenuName extends Component {
   handleClick = () =>{
     this.props.name(this.state.name)
     console.log(this.state);
-    this.setState({name: ' '});
-    
+   
 };
 
 
