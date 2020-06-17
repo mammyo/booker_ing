@@ -27,7 +27,7 @@ constructor(props){
             {this.props.uname}
         </div>
 
-        <Link exact to="/" ><button>돌아가기</button></Link>
+        <Link exact to={`/${this.props.uid}`} ><button>돌아가기</button></Link>
       </div>
     );
   }

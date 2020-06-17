@@ -112,7 +112,7 @@ class Ceo_regist extends Component {
                 <div className="login_cont_cont">
                     <div className="login_logo">
 
-                        <h3>사업 등록하기</h3>
+                        <h6>사업 등록하기</h6>
 
                         {/* <div className='radio'>
                             <input type="radio" value="음식점" checked={this.state.category === '음식점'} onChange={this.optionchange} />
@@ -139,17 +139,17 @@ class Ceo_regist extends Component {
                             <input type="radio" value="수영장" checked={this.state.category === '수영장'} onChange={this.optionchange} />
                             <button value="수영장" onClick={this.optionchange}>수영장</button>
                         </div> */}
-                        <div className='category'>
+                        <div className='regist_category'>
                         <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
                                 스포츠
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => this.optionclick("볼링장")}>볼링장</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("헬스장")}>헬스장</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("수영장")}>수영장</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("필라테스")}>필라테스</Dropdown.Item>
+                            <Dropdown.Menu id='dropdown-menu'>
+                                <Dropdown.Item  id="dropdown-item" onClick={() => this.optionclick("볼링장")}>볼링장</Dropdown.Item>
+                                <Dropdown.Item  id="dropdown-item" onClick={() => this.optionclick("헬스장")}>헬스장</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("수영장")}>수영장</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("필라테스")}>필라테스</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
 
@@ -158,10 +158,10 @@ class Ceo_regist extends Component {
                                 여가
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => this.optionclick("PC방")}>PC방</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("당구장")}>당구장</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("낚시터")}>낚시터</Dropdown.Item>
+                            <Dropdown.Menu id='dropdown-menu'>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("PC방")}>PC방</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("당구장")}>당구장</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("낚시터")}>낚시터</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
 
@@ -170,10 +170,10 @@ class Ceo_regist extends Component {
                                 대여
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => this.optionclick("스키장")}>스키장</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("렌트카")}>렌트카</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("배드민턴")}>배드민턴</Dropdown.Item>
+                            <Dropdown.Menu id='dropdown-menu'>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("스키장")}>스키장</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("렌트카")}>렌트카</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("배드민턴")}>배드민턴</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
 
@@ -182,9 +182,9 @@ class Ceo_regist extends Component {
                                 먹거리
                             </Dropdown.Toggle>
 
-                            <Dropdown.Menu>
-                                <Dropdown.Item onClick={() => this.optionclick("음식점")}>음식점</Dropdown.Item>
-                                <Dropdown.Item onClick={() => this.optionclick("카페")}>카페</Dropdown.Item>
+                            <Dropdown.Menu id='dropdown-menu'>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("음식점")}>음식점</Dropdown.Item>
+                                <Dropdown.Item id="dropdown-item" onClick={() => this.optionclick("카페")}>카페</Dropdown.Item>
                             </Dropdown.Menu>
                         </Dropdown>
                         </div>
