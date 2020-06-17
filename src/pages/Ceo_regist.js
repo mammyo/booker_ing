@@ -4,7 +4,7 @@ import Noregist from './Noregist';
 import { post } from 'axios';
 import Postcode from '../Servicelist/kakaoAddress';
 import { Dropdown } from 'react-bootstrap';
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -19,7 +19,7 @@ class Ceo_regist extends Component {
     }
 
     close = () => {
-        window.opener.location.href = "http://localhost:3000";
+        window.opener.location.href = `http://localhost:3001/${this.props.match.params.uid}`;
         window.close()
 
     }

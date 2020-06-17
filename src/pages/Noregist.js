@@ -28,7 +28,7 @@ class Noregist extends Component {
     }
 
     callApi = () => {
-        fetch('http://52.79.100.159:8080/api/store_list')
+        fetch('http://59.29.224.191:8080/api/store_list')
             .then(response => response.json())
             .then(data => 
                 this.setState({
@@ -52,7 +52,7 @@ class Noregist extends Component {
 
 
     busregist = () => {
-        window.open('Ceo_regist', 'ot', 'width=800, height=600');
+        window.open(`Ceo_regist/${this.props.match.params.uid}`, 'ot', 'width=800, height=600');
     }
 
     handleCreate = (data) => {
@@ -63,9 +63,12 @@ class Noregist extends Component {
 
     render() {
         console.log(this.state.Ceolist);
+        console.log(this.state.Ceolist);
+        const { params} = this.props.match;
+        console.log(params.uid);
         return (
-            <div class="img">
-                <div class="content">
+            <div className="img">
+                <div className="content">
                     <h6>등록한 사업지를 선택해주세요</h6>
                     <div className='choose'>
                         {this.state.Ceolist.map(element => <Fruit name={element[0]} number={element[1]} />)}
