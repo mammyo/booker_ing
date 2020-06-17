@@ -3,7 +3,8 @@ import './Ceo_regist.css';
 import Noregist from './Noregist';
 import { post } from 'axios';
 import Postcode from '../Servicelist/kakaoAddress';
-
+import { Dropdown } from 'react-bootstrap';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
@@ -57,7 +58,7 @@ class Ceo_regist extends Component {
     }
 
     addCustomer = () => {
-        const url = 'http://59.29.224.191:8080/api/store_list';
+        const url = 'http://52.79.100.159:8080/api/store_list';
         const data = {
             store_name: this.state.busName,
             store_address: this.state.busAddress,
@@ -77,6 +78,14 @@ class Ceo_regist extends Component {
         });
 
     }
+
+    optionclick = (data) => {
+        this.setState({
+            category: data,
+        });
+
+    }
+
 
     address = () => {
         window.open('address', 'address', 'width=600, height=600');
@@ -103,9 +112,9 @@ class Ceo_regist extends Component {
                 <div className="login_cont_cont">
                     <div className="login_logo">
 
-                        <h6>사업자 등록하기</h6>
+                        <h3>사업 등록하기</h3>
 
-                        <div className='radio'>
+                        {/* <div className='radio'>
                             <input type="radio" value="음식점" checked={this.state.category === '음식점'} onChange={this.optionchange} />
                             <button value="음식점" onClick={this.optionchange}>음식점</button>
 
@@ -129,7 +138,58 @@ class Ceo_regist extends Component {
 
                             <input type="radio" value="수영장" checked={this.state.category === '수영장'} onChange={this.optionchange} />
                             <button value="수영장" onClick={this.optionchange}>수영장</button>
+                        </div> */}
+                        <div className='category'>
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                스포츠
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => this.optionclick("볼링장")}>볼링장</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("헬스장")}>헬스장</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("수영장")}>수영장</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("필라테스")}>필라테스</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                여가
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => this.optionclick("PC방")}>PC방</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("당구장")}>당구장</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("낚시터")}>낚시터</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                대여
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => this.optionclick("스키장")}>스키장</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("렌트카")}>렌트카</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("배드민턴")}>배드민턴</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
+
+                        <Dropdown>
+                            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                                먹거리
+                            </Dropdown.Toggle>
+
+                            <Dropdown.Menu>
+                                <Dropdown.Item onClick={() => this.optionclick("음식점")}>음식점</Dropdown.Item>
+                                <Dropdown.Item onClick={() => this.optionclick("카페")}>카페</Dropdown.Item>
+                            </Dropdown.Menu>
+                        </Dropdown>
                         </div>
+
+
 
                         <div className="login_id">
                             <input className="login_id_input" placeholder="등록할 사업자명"

@@ -99,7 +99,7 @@ class Dashboard extends Component {
 
 
     callApiday = (numberdata, daydata) => {
-        fetch(`http://59.29.224.191:8080/api/book_table/${numberdata}/${daydata}`)
+        fetch(`http://52.79.100.159:8080/api/book_table/${numberdata}/${daydata}`)
             .then(response => response.json())
             .then(data =>
                 this.setState({
@@ -110,7 +110,7 @@ class Dashboard extends Component {
     }
 
     callApiweek = (numberdata, weekdata1,weekdata2) => {
-        fetch(`http://59.29.224.191:8080/api/book_table/${numberdata}/${weekdata1}/${weekdata2}`)
+        fetch(`http://52.79.100.159:8080/api/book_table/${numberdata}/${weekdata1}/${weekdata2}`)
             .then(response => response.json())
             .then(data =>
                 this.setState({

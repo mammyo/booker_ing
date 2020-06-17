@@ -44,8 +44,12 @@
     
 }
 
+.login_logo h3{
+    padding-top:10% ;
+}
+
 .login_id{
-    margin-top:-10px;
+    margin-top:-20px;
 }
 
 .login_id_input{
@@ -76,6 +80,8 @@
     background-color:rgb(34, 28, 28);
     margin-right:10px ;
     margin-left: -80px;
+    border-radius: 5px;
+    padding-bottom: 8px;
     
 }
 .login_address_btn{
@@ -107,15 +113,18 @@
     font-size: 15px;
     color: white;
     background-color:rgb(34, 28, 28);
+    border-radius: 5px;
     margin-right:10px ;
     margin-left: -80px;
+    padding-bottom: 8px;
     
 }
 .login_check_btn{
     font-size: 20px;
     font-weight: bolder;
     color: rgb(255, 255, 255);
-    border: 3px solid rgb(34, 28, 28);;
+    border: 3px solid rgb(34, 28, 28);
+    border-radius: 5px;
     background-color:rgb(34, 28, 28);
     margin:auto;
     width:350px;
@@ -135,3 +144,16 @@
 }
 
 
+#dropdown-basic{
+    background-color: black;
+    border: 1px solid black;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+#dropdown-basic:hover{
+    border: 1px solid black;
+}
+.category{
+    margin-bottom: 0;
+}

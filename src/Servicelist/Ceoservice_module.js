@@ -44,7 +44,7 @@ class Ceoservice_module extends Component {
 
 
     addCustomer = () => {
-        const url = `http://59.29.224.191:8080/api/best_menu`;
+        const url = `http://52.79.100.159:8080/api/best_menu`;
         const data = {
             storeNumber:this.props.match.params.storenumber,
             serviceName: this.state.menuname,

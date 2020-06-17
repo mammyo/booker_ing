@@ -57,7 +57,7 @@ class Ceohomepage extends Component {
 
 
     addCustomer = () => {
-        const url = `http://http://59.29.224.191:8080/api/store_list/${this.props.businessnumber}`;
+        const url = `http://52.79.100.159:8080/api/store_list/${this.props.businessnumber}`;
         const data = {
             
             storeImage1: this.state.img1,

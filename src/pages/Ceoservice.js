@@ -93,7 +93,7 @@ class Ceoservice extends Component {
     }
 
     callApi = () => {
-        fetch(`http://59.29.224.191:8080/api/best_menu/${this.props.businessnumber}`)
+        fetch(`http://52.79.100.159:8080/api/best_menu/${this.props.businessnumber}`)
             .then(response => response.json())
             
             .then(data => 
